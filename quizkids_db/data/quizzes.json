@@ -1,0 +1,957 @@
+[
+    {
+        "id": 1,
+        "tema": "Matemática: Adição Simples",
+        "dificuldade": "Fácil",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 7],
+        "perguntas": [
+            { "id": 101, "texto": "Quanto é 2 + 2?", "opcoes": ["3", "4", "5", "6"], "correta": "4" },
+            { "id": 102, "texto": "Quanto é 5 + 3?", "opcoes": ["10", "8", "15", "7"], "correta": "8" },
+            { "id": 103, "texto": "Se tem 3 maçãs e ganha mais 2, com quantas fica?", "opcoes": ["4", "5", "6", "3"], "correta": "5" }
+        ]
+    },
+    {
+        "id": 2,
+        "tema": "Mundo Animal",
+        "dificuldade": "Médio",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 10],
+        "perguntas": [
+            { "id": 201, "texto": "Qual o maior mamífero terrestre?", "opcoes": ["Elefante", "Rinoceronte", "Hipopótamo", "Girafa"], "correta": "Elefante" },
+            { "id": 202, "texto": "Qual animal é conhecido como 'Rei da Selva'?", "opcoes": ["Tigre", "Urso", "Leão", "Lobo"], "correta": "Leão" },
+            { "id": 203, "texto": "Qual destes animais é um réptil?", "opcoes": ["Sapo", "Pássaro", "Cobra", "Peixe"], "correta": "Cobra" },
+            { "id": 204, "texto": "Quantas patas tem uma aranha?", "opcoes": ["6", "8", "10", "12"], "correta": "8" }
+        ]
+    },
+    {
+        "id": 3,
+        "tema": "Grandes Invenções",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 301, "texto": "Quem inventou a lâmpada elétrica?", "opcoes": ["Nikola Tesla", "Albert Einstein", "Thomas Edison", "Graham Bell"], "correta": "Thomas Edison" },
+            { "id": 302, "texto": "Em que ano o homem pisou na Lua pela primeira vez?", "opcoes": ["1965", "1969", "1972", "1981"], "correta": "1969" },
+            { "id": 303, "texto": "Qual invenção é creditada a Johannes Gutenberg?", "opcoes": ["O telefone", "A prensa de tipos móveis", "O motor a vapor", "O telescópio"], "correta": "A prensa de tipos móveis" }
+        ]
+    },
+    {
+        "id": 4,
+        "tema": "Cores e Formas",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 7],
+        "perguntas": [
+            { "id": 401, "texto": "Qual a cor do céu num dia limpo?", "opcoes": ["Verde", "Azul", "Vermelho", "Amarelo"], "correta": "Azul" },
+            { "id": 402, "texto": "Qual forma não tem lados retos?", "opcoes": ["Quadrado", "Triângulo", "Círculo", "Retângulo"], "correta": "Círculo" },
+            { "id": 403, "texto": "A mistura de amarelo e azul dá qual cor?", "opcoes": ["Laranja", "Roxo", "Verde", "Marrom"], "correta": "Verde" }
+        ]
+    },
+    {
+        "id": 5,
+        "tema": "Geografia do Brasil",
+        "dificuldade": "Médio",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 501, "texto": "Qual é a capital do Brasil?", "opcoes": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"], "correta": "Brasília" },
+            { "id": 502, "texto": "Qual o maior rio do Brasil em volume de água?", "opcoes": ["Rio São Francisco", "Rio Paraná", "Rio Amazonas", "Rio Tietê"], "correta": "Rio Amazonas" },
+            { "id": 503, "texto": "Em que região do Brasil fica o estado da Bahia?", "opcoes": ["Sul", "Norte", "Sudeste", "Nordeste"], "correta": "Nordeste" }
+        ]
+    },
+     {
+        "id": 6,
+        "tema": "Português: Sinónimos",
+        "dificuldade": "Médio",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+            { "id": 601, "texto": "Qual palavra é sinónimo de 'belo'?", "opcoes": ["Feio", "Bonito", "Alto", "Baixo"], "correta": "Bonito" },
+            { "id": 602, "texto": "Qual palavra é sinónimo de 'rápido'?", "opcoes": ["Lento", "Veloz", "Grande", "Pequeno"], "correta": "Veloz" },
+            { "id": 603, "texto": "Qual palavra é sinónimo de 'alegre'?", "opcoes": ["Triste", "Zangado", "Contente", "Cansado"], "correta": "Contente" }
+        ]
+    },
+    {
+        "id": 7,
+        "tema": "Sistema Solar",
+        "dificuldade": "Difícil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 701, "texto": "Qual é o maior planeta do nosso Sistema Solar?", "opcoes": ["Terra", "Marte", "Júpiter", "Saturno"], "correta": "Júpiter" },
+            { "id": 702, "texto": "Qual planeta é conhecido como 'Planeta Vermelho'?", "opcoes": ["Vénus", "Marte", "Mercúrio", "Urano"], "correta": "Marte" },
+            { "id": 703, "texto": "Qual planeta é famoso pelos seus anéis?", "opcoes": ["Júpiter", "Neptuno", "Terra", "Saturno"], "correta": "Saturno" }
+        ]
+    },
+    {
+        "id": 8,
+        "tema": "Matemática: Multiplicação",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 9],
+        "perguntas": [
+            { "id": 801, "texto": "Quanto é 4 x 5?", "opcoes": ["16", "20", "24", "25"], "correta": "20" },
+            { "id": 802, "texto": "Quanto é 7 x 3?", "opcoes": ["21", "24", "18", "28"], "correta": "21" },
+            { "id": 803, "texto": "Quanto é 10 x 10?", "opcoes": ["100", "1000", "20", "1"], "correta": "100" }
+        ]
+    },
+    {
+        "id": 9,
+        "tema": "História do Brasil: Período Colonial",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+          { "id": 901, "texto": "Em que ano o Brasil foi descoberto pelos portugueses?", "opcoes": ["1492", "1500", "1530", "1600"], "correta": "1500" },
+          { "id": 902, "texto": "Quem foi o primeiro governador-geral do Brasil?", "opcoes": ["Pedro Álvares Cabral", "Martim Afonso de Sousa", "Tomé de Sousa", "Mem de Sá"], "correta": "Tomé de Sousa" },
+          { "id": 903, "texto": "Qual foi a primeira capital do Brasil?", "opcoes": ["Rio de Janeiro", "São Paulo", "Salvador", "Recife"], "correta": "Salvador" },
+          { "id": 904, "texto": "Qual tratado dividiu as novas terras entre Portugal e Espanha?", "opcoes": ["Tratado de Madrid", "Tratado de Tordesilhas", "Tratado de Lisboa", "Tratado de Utrecht"], "correta": "Tratado de Tordesilhas" },
+          { "id": 905, "texto": "Qual foi a principal atividade económica no início da colonização do Brasil?", "opcoes": ["Mineração de ouro", "Extração de pau-brasil", "Cultivo de café", "Pecuária"], "correta": "Extração de pau-brasil" },
+          { "id": 906, "texto": "Quem eram os bandeirantes?", "opcoes": ["Líderes religiosos", "Exploradores que buscavam riquezas e capturavam indígenas", "Governadores das capitanias", "Comerciantes de especiarias"], "correta": "Exploradores que buscavam riquezas e capturavam indígenas" },
+          { "id": 907, "texto": "O que foi a Inconfidência Mineira?", "opcoes": ["Uma revolta de escravos", "Um movimento pela independência de Minas Gerais", "Uma guerra contra os holandeses", "Uma disputa por terras"], "correta": "Um movimento pela independência de Minas Gerais" }
+        ]
+      },
+      {
+        "id": 10,
+        "tema": "Ciências: Corpo Humano",
+        "dificuldade": "Médio",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+          { "id": 1001, "texto": "Qual órgão bombeia sangue para todo o corpo?", "opcoes": ["Pulmão", "Cérebro", "Coração", "Fígado"], "correta": "Coração" },
+          { "id": 1002, "texto": "Quantos ossos tem um corpo humano adulto, aproximadamente?", "opcoes": ["150", "206", "300", "250"], "correta": "206" },
+          { "id": 1003, "texto": "Qual é o maior órgão do corpo humano?", "opcoes": ["Pele", "Fígado", "Intestino", "Cérebro"], "correta": "Pele" },
+          { "id": 1004, "texto": "Qual órgão é responsável pela nossa respiração?", "opcoes": ["Coração", "Estômago", "Pulmões", "Rins"], "correta": "Pulmões" },
+          { "id": 1005, "texto": "Que osso protege o nosso cérebro?", "opcoes": ["Fémur", "Costelas", "Coluna", "Crânio"], "correta": "Crânio" },
+          { "id": 1006, "texto": "Qual parte do corpo usamos para sentir o sabor dos alimentos?", "opcoes": ["Nariz", "Orelha", "Língua", "Olhos"], "correta": "Língua" },
+          { "id": 1007, "texto": "Qual a função dos rins no nosso corpo?", "opcoes": ["Digere a comida", "Filtram o sangue", "Produzem hormonas", "Controlam os movimentos"], "correta": "Filtram o sangue" }
+        ]
+      },
+      {
+        "id": 11,
+        "tema": "Matemática: Frações Básicas",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 10],
+        "perguntas": [
+          { "id": 1101, "texto": "O que representa 1/2 de uma pizza?", "opcoes": ["Um quarto", "Metade", "Um terço", "Inteira"], "correta": "Metade" },
+          { "id": 1102, "texto": "Qual fração é maior: 1/3 ou 1/4?", "opcoes": ["1/3", "1/4", "São iguais", "Nenhuma"], "correta": "1/3" },
+          { "id": 1103, "texto": "Como se escreve 'três quartos' em forma de fração?", "opcoes": ["4/3", "3/3", "3/4", "1/4"], "correta": "3/4" },
+          { "id": 1104, "texto": "Na fração 2/5, qual número é o denominador?", "opcoes": ["2", "5", "7", "3"], "correta": "5" },
+          { "id": 1105, "texto": "Quanto é 1/2 + 1/2?", "opcoes": ["1/4", "2/4", "1", "2"], "correta": "1" },
+          { "id": 1106, "texto": "Qual fração representa um inteiro?", "opcoes": ["1/2", "3/4", "5/5", "2/3"], "correta": "5/5" },
+          { "id": 1107, "texto": "Se come 1/4 de um chocolate com 8 quadrados, quantos quadrados comeu?", "opcoes": ["1", "2", "3", "4"], "correta": "2" }
+        ]
+      },
+      {
+        "id": 12,
+        "tema": "Português: Antónimos",
+        "dificuldade": "Fácil",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 8],
+        "perguntas": [
+          { "id": 1201, "texto": "Qual é o contrário de 'grande'?", "opcoes": ["Alto", "Enorme", "Pequeno", "Largo"], "correta": "Pequeno" },
+          { "id": 1202, "texto": "Qual é o contrário de 'feliz'?", "opcoes": ["Contente", "Alegre", "Sorridente", "Triste"], "correta": "Triste" },
+          { "id": 1203, "texto": "Qual é o contrário de 'quente'?", "opcoes": ["Morno", "Frio", "Abrasador", "Gelado"], "correta": "Frio" },
+          { "id": 1204, "texto": "Qual é o contrário de 'dia'?", "opcoes": ["Manhã", "Tarde", "Noite", "Madrugada"], "correta": "Noite" },
+          { "id": 1205, "texto": "Qual é o contrário de 'cheio'?", "opcoes": ["Completo", "Lotado", "Vazio", "Transbordando"], "correta": "Vazio" },
+          { "id": 1206, "texto": "Qual é o contrário de 'rápido'?", "opcoes": ["Veloz", "Lento", "Ligeiro", "Curto"], "correta": "Lento" },
+          { "id": 1207, "texto": "Qual é o contrário de 'claro'?", "opcoes": ["Brilhante", "Luminoso", "Iluminado", "Escuro"], "correta": "Escuro" }
+        ]
+      },
+      {
+        "id": 13,
+        "tema": "Geografia: Continentes",
+        "dificuldade": "Médio",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+          { "id": 1301, "texto": "Em qual continente fica o Egito?", "opcoes": ["Europa", "Ásia", "África", "Oceânia"], "correta": "África" },
+          { "id": 1302, "texto": "Qual é o maior continente em área?", "opcoes": ["África", "América", "Europa", "Ásia"], "correta": "Ásia" },
+          { "id": 1303, "texto": "Em qual continente fica o Brasil?", "opcoes": ["América do Norte", "África", "América do Sul", "Europa"], "correta": "América do Sul" },
+          { "id": 1304, "texto": "Qual continente é conhecido como o 'continente gelado'?", "opcoes": ["Ásia", "Gronelândia", "Ártico", "Antártida"], "correta": "Antártida" },
+          { "id": 1305, "texto": "Em que continente se situa a China?", "opcoes": ["África", "Ásia", "Europa", "América"], "correta": "Ásia" },
+          { "id": 1306, "texto": "A Austrália faz parte de qual continente?", "opcoes": ["Ásia", "Ilha isolada", "Oceânia", "América"], "correta": "Oceânia" },
+          { "id": 1307, "texto": "Em que continente se situa a Espanha?", "opcoes": ["África", "América do Sul", "Ásia", "Europa"], "correta": "Europa" }
+        ]
+      },
+      {
+        "id": 14,
+        "tema": "Ciências: Estados da Matéria",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 9],
+        "perguntas": [
+          { "id": 1401, "texto": "O gelo está em qual estado da matéria?", "opcoes": ["Líquido", "Sólido", "Gasoso", "Plasmático"], "correta": "Sólido" },
+          { "id": 1402, "texto": "Quando a água ferve, ela vira qual estado?", "opcoes": ["Sólido", "Líquido", "Vapor (Gasoso)", "Nenhum"], "correta": "Vapor (Gasoso)" },
+          { "id": 1403, "texto": "O ar que respiramos está em que estado?", "opcoes": ["Sólido", "Líquido", "Gasoso", "Invisível"], "correta": "Gasoso" },
+          { "id": 1404, "texto": "A passagem do estado sólido para o líquido chama-se...", "opcoes": ["Fusão", "Vaporização", "Solidificação", "Condensação"], "correta": "Fusão" },
+          { "id": 1405, "texto": "O suco de laranja está em que estado da matéria?", "opcoes": ["Gasoso", "Sólido", "Vitamina", "Líquido"], "correta": "Líquido" },
+          { "id": 1406, "texto": "A passagem do estado gasoso para o líquido chama-se...", "opcoes": ["Fusão", "Condensação", "Solidificação", "Evaporação"], "correta": "Condensação" },
+          { "id": 1407, "texto": "Qual estado da matéria tem forma e volume definidos?", "opcoes": ["Líquido", "Gasoso", "Sólido", "Todos"], "correta": "Sólido" }
+        ]
+      },
+      {
+        "id": 15,
+        "tema": "História: Grécia Antiga",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+          { "id": 1501, "texto": "Onde nasceram os Jogos Olímpicos?", "opcoes": ["Roma", "Atenas", "Olímpia", "Esparta"], "correta": "Olímpia" },
+          { "id": 1502, "texto": "Quem foi um famoso filósofo grego, mestre de Platão?", "opcoes": ["Aristóteles", "Sócrates", "Pitágoras", "Heródoto"], "correta": "Sócrates" },
+          { "id": 1503, "texto": "O que era a Acrópole de Atenas?", "opcoes": ["Um mercado", "Um teatro", "A parte mais alta da cidade, com templos", "Um porto"], "correta": "A parte mais alta da cidade, com templos" },
+          { "id": 1504, "texto": "Qual o nome do principal deus da mitologia grega?", "opcoes": ["Apolo", "Hades", "Poseidon", "Zeus"], "correta": "Zeus" },
+          { "id": 1505, "texto": "Como era chamada a cidade-estado grega?", "opcoes": ["Civitas", "Urbs", "Pólis", "Metrópole"], "correta": "Pólis" },
+          { "id": 1506, "texto": "Quem escreveu as obras 'Ilíada' e 'Odisseia'?", "opcoes": ["Sófocles", "Eurípedes", "Homero", "Platão"], "correta": "Homero" },
+          { "id": 1507, "texto": "Atenas é considerada o berço da...", "opcoes": ["Monarquia", "Tirania", "Oligarquia", "Democracia"], "correta": "Democracia" }
+        ]
+      },
+      {
+        "id": 16,
+        "tema": "Matemática: Subtração",
+        "dificuldade": "Fácil",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 7],
+        "perguntas": [
+          { "id": 1601, "texto": "Quanto é 5 - 2?", "opcoes": ["1", "2", "3", "4"], "correta": "3" },
+          { "id": 1602, "texto": "Se tem 10 balões e 4 estouram, quantos sobram?", "opcoes": ["5", "6", "7", "8"], "correta": "6" },
+          { "id": 1603, "texto": "Quanto é 8 - 8?", "opcoes": ["8", "1", "0", "16"], "correta": "0" },
+          { "id": 1604, "texto": "Tinha 7 lápis e perdi 1. Fiquei com...", "opcoes": ["8 lápis", "7 lápis", "6 lápis", "5 lápis"], "correta": "6 lápis" },
+          { "id": 1605, "texto": "Quanto é 9 - 5?", "opcoes": ["4", "5", "3", "2"], "correta": "4" },
+          { "id": 1606, "texto": "Qual número vem antes do 5?", "opcoes": ["6", "3", "4", "2"], "correta": "4" },
+          { "id": 1607, "texto": "Uma dúzia são 12. Meia dúzia são 6. Quanto é 12 - 6?", "opcoes": ["4", "5", "6", "7"], "correta": "6" }
+        ]
+      },
+      {
+        "id": 17,
+        "tema": "Português: Ortografia",
+        "dificuldade": "Médio",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+          { "id": 1701, "texto": "Qual a forma correta de escrever: 'viajem' ou 'viagem'?", "opcoes": ["Viagem (substantivo)", "Viagem (verbo)", "Ambas estão corretas dependendo do uso", "Nenhuma está correta"], "correta": "Ambas estão corretas dependendo do uso" },
+          { "id": 1702, "texto": "Qual a forma correta: 'excessão' ou 'exceção'?", "opcoes": ["Excessão", "Exceção", "Esceção", "Ecseção"], "correta": "Exceção" },
+          { "id": 1703, "texto": "A palavra 'através' leva acento?", "opcoes": ["Sim", "Não", "Só no plural", "Depende da frase"], "correta": "Sim" },
+          { "id": 1704, "texto": "Como se escreve o som de 'CH' em '___ícara'?", "opcoes": ["X", "CH", "S", "Z"], "correta": "X" },
+          { "id": 1705, "texto": "Qual é o correto: 'derrepente' ou 'de repente'?", "opcoes": ["Derrepente", "De repente", "Os dois estão certos", "Os dois estão errados"], "correta": "De repente" },
+          { "id": 1706, "texto": "Usa-se 'mas' ou 'mais' para indicar oposição?", "opcoes": ["Mais", "Mas", "Ambos", "Nenhum"], "correta": "Mas" },
+          { "id": 1707, "texto": "Qual a forma correta: 'concerteza' ou 'com certeza'?", "opcoes": ["Concerteza", "Com certeza", "Conserteza", "Comserteza"], "correta": "Com certeza" }
+        ]
+      },
+      {
+        "id": 18,
+        "tema": "Cultura Pop: Super-Heróis",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 12],
+        "perguntas": [
+          { "id": 1801, "texto": "Qual a cor do Hulk?", "opcoes": ["Azul", "Vermelho", "Verde", "Amarelo"], "correta": "Verde" },
+          { "id": 1802, "texto": "Qual herói usa um escudo como arma principal?", "opcoes": ["Homem de Ferro", "Thor", "Capitão América", "Homem-Aranha"], "correta": "Capitão América" },
+          { "id": 1803, "texto": "Qual o nome do planeta natal do Super-Homem?", "opcoes": ["Asgard", "Terra", "Marte", "Krypton"], "correta": "Krypton" },
+          { "id": 1804, "texto": "Qual destes heróis é conhecido por ser bilionário?", "opcoes": ["Super-Homem", "Flash", "Batman", "Lanterna Verde"], "correta": "Batman" },
+          { "id": 1805, "texto": "A Mulher-Maravilha é uma princesa de qual povo?", "opcoes": ["Atlantes", "Kryptonianas", "Amazonas", "Asgardianas"], "correta": "Amazonas" },
+          { "id": 1806, "texto": "Qual herói ganha seus poderes de um anel verde?", "opcoes": ["Flash", "Capitão Marvel", "Lanterna Verde", "Doutor Estranho"], "correta": "Lanterna Verde" },
+          { "id": 1807, "texto": "Qual é a principal fraqueza do Super-Homem?", "opcoes": ["Fogo", "Água", "Magia", "Kryptonita"], "correta": "Kryptonita" }
+        ]
+      },
+      {
+        "id": 19,
+        "tema": "Ciências: O Ciclo da Água",
+        "dificuldade": "Médio",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 10],
+        "perguntas": [
+            { "id": 1901, "texto": "Como se chama a passagem da água do estado líquido para o gasoso?", "opcoes": ["Condensação", "Solidificação", "Evaporação", "Precipitação"], "correta": "Evaporação" },
+            { "id": 1902, "texto": "A chuva é um exemplo de qual etapa do ciclo da água?", "opcoes": ["Evaporação", "Transpiração", "Condensação", "Precipitação"], "correta": "Precipitação" },
+            { "id": 1903, "texto": "O que são as nuvens?", "opcoes": ["Fumo de fábricas", "Vapor de água condensado", "Algodão no céu", "Gelo flutuante"], "correta": "Vapor de água condensado" },
+            { "id": 1904, "texto": "Para onde vai a maior parte da água que evapora?", "opcoes": ["Para os rios", "Para a atmosfera", "Para o subsolo", "Para as plantas"], "correta": "Para a atmosfera" },
+            { "id": 1905, "texto": "Como a água dos rios e lagos volta para a atmosfera?", "opcoes": ["Apenas pela chuva", "Pela evaporação", "Congelando", "Sendo bebida"], "correta": "Pela evaporação" },
+            { "id": 1906, "texto": "A neve e o granizo são formas de...", "opcoes": ["Condensação", "Evaporação", "Infiltração", "Precipitação"], "correta": "Precipitação" },
+            { "id": 1907, "texto": "O que acontece quando o vapor de água esfria na atmosfera?", "opcoes": ["Ele desaparece", "Ele congela instantaneamente", "Ele condensa e forma nuvens", "Ele cai como fogo"], "correta": "Ele condensa e forma nuvens" }
+        ]
+      },
+      {
+        "id": 20,
+        "tema": "Geografia: Pontos Cardeais",
+        "dificuldade": "Fácil",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 9],
+        "perguntas": [
+            { "id": 2001, "texto": "O sol nasce em qual direção?", "opcoes": ["Norte", "Sul", "Este", "Oeste"], "correta": "Este" },
+            { "id": 2002, "texto": "Qual o ponto cardeal oposto ao Norte?", "opcoes": ["Sul", "Este", "Oeste", "Nordeste"], "correta": "Sul" },
+            { "id": 2003, "texto": "Em que direção o sol se põe?", "opcoes": ["Norte", "Sul", "Este", "Oeste"], "correta": "Oeste" },
+            { "id": 2004, "texto": "Se estou virado para o Norte, o Este está à minha...", "opcoes": ["Frente", "Esquerda", "Direita", "Costas"], "correta": "Direita" },
+            { "id": 2005, "texto": "Qual instrumento usa uma agulha magnética para apontar para o Norte?", "opcoes": ["Telescópio", "Bússola", "Termómetro", "Relógio"], "correta": "Bússola" },
+            { "id": 2006, "texto": "O que significa a sigla 'S' numa bússola?", "opcoes": ["Sábado", "Sempre", "Sul", "Superior"], "correta": "Sul" },
+            { "id": 2007, "texto": "Entre o Norte e o Este, qual ponto colateral encontramos?", "opcoes": ["Sudeste", "Noroeste", "Sudoeste", "Nordeste"], "correta": "Nordeste" }
+        ]
+      },
+      {
+        "id": 21,
+        "tema": "Matemática: Formas Geométricas",
+        "dificuldade": "Fácil",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 8],
+        "perguntas": [
+            { "id": 2101, "texto": "Quantos lados tem um quadrado?", "opcoes": ["3", "4", "5", "6"], "correta": "4" },
+            { "id": 2102, "texto": "Uma bola de futebol parece com qual forma geométrica?", "opcoes": ["Cubo", "Pirâmide", "Cilindro", "Esfera"], "correta": "Esfera" },
+            { "id": 2103, "texto": "Qual forma tem todos os lados iguais e 4 ângulos retos?", "opcoes": ["Retângulo", "Losango", "Quadrado", "Trapézio"], "correta": "Quadrado" },
+            { "id": 2104, "texto": "Uma lata de refrigerante tem a forma de um...", "opcoes": ["Cone", "Cilindro", "Cubo", "Esfera"], "correta": "Cilindro" },
+            { "id": 2105, "texto": "Quantos vértices (cantos) tem um triângulo?", "opcoes": ["2", "3", "4", "5"], "correta": "3" },
+            { "id": 2106, "texto": "O chapéu de um palhaço geralmente tem a forma de um...", "opcoes": ["Cilindro", "Cone", "Prisma", "Cubo"], "correta": "Cone" },
+            { "id": 2107, "texto": "Quantas faces tem um dado comum (cubo)?", "opcoes": ["4", "5", "6", "8"], "correta": "6" }
+        ]
+      },
+      {
+        "id": 22,
+        "tema": "Português: Plural",
+        "dificuldade": "Médio",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 10],
+        "perguntas": [
+            { "id": 2201, "texto": "Qual é o plural de 'cidadão'?", "opcoes": ["Cidadãos", "Cidadões", "Cidadães", "Cidadãis"], "correta": "Cidadãos" },
+            { "id": 2202, "texto": "Qual é o plural de 'pão'?", "opcoes": ["Pãos", "Pães", "Pões", "Pãis"], "correta": "Pães" },
+            { "id": 2203, "texto": "Qual é o plural de 'animal'?", "opcoes": ["Animais", "Animals", "Animals", "Animães"], "correta": "Animais" },
+            { "id": 2204, "texto": "Qual é o plural de 'lápis'?", "opcoes": ["Lápises", "Lápis", "Lápis's", "Lápiz"], "correta": "Lápis" },
+            { "id": 2205, "texto": "Qual é o plural de 'flor'?", "opcoes": ["Floris", "Flores", "Flors", "Flor"], "correta": "Flores" },
+            { "id": 2206, "texto": "Qual é o plural de 'mão'?", "opcoes": ["Mãos", "Mães", "Mões", "Mãoes"], "correta": "Mãos" },
+            { "id": 2207, "texto": "Qual é o plural de 'funil'?", "opcoes": ["Funils", "Funis", "Funiles", "Funéis"], "correta": "Funis" }
+        ]
+      },
+      {
+        "id": 23,
+        "tema": "História: Antigo Egito",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 2301, "texto": "Que rio era vital para a civilização egípcia?", "opcoes": ["Rio Tigre", "Rio Eufrates", "Rio Nilo", "Rio Jordão"], "correta": "Rio Nilo" },
+            { "id": 2302, "texto": "Como se chamavam os governantes do Antigo Egito?", "opcoes": ["Reis", "Imperadores", "Faraós", "Césares"], "correta": "Faraós" },
+            { "id": 2303, "texto": "Para que serviam as pirâmides?", "opcoes": ["Casas para o povo", "Palácios de governo", "Templos religiosos", "Túmulos para os faraós"], "correta": "Túmulos para os faraós" },
+            { "id": 2304, "texto": "O que é mumificação?", "opcoes": ["Um tipo de escrita", "Um processo para preservar corpos", "Uma cerimónia de casamento", "Um festival de colheita"], "correta": "Um processo para preservar corpos" },
+            { "id": 2305, "texto": "Qual era o nome do sistema de escrita dos egípcios?", "opcoes": ["Alfabeto", "Cuneiforme", "Hieróglifos", "Sânscrito"], "correta": "Hieróglifos" },
+            { "id": 2306, "texto": "Qual deus egípcio era o deus do sol?", "opcoes": ["Anúbis", "Hórus", "Osíris", "Rá"], "correta": "Rá" },
+            { "id": 2307, "texto": "A Esfinge de Gizé tem corpo de leão e cabeça de...", "opcoes": ["Águia", "Serpente", "Humano", "Chacal"], "correta": "Humano" }
+        ]
+      },
+      {
+        "id": 24,
+        "tema": "Ciências: Plantas",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 9],
+        "perguntas": [
+            { "id": 2401, "texto": "Qual parte da planta absorve água e nutrientes do solo?", "opcoes": ["Folha", "Caule", "Flor", "Raiz"], "correta": "Raiz" },
+            { "id": 2402, "texto": "Qual processo as plantas usam para produzir o seu próprio alimento?", "opcoes": ["Respiração", "Fotossíntese", "Digestão", "Transpiração"], "correta": "Fotossíntese" },
+            { "id": 2403, "texto": "O que as plantas precisam, além de água e sol, para a fotossíntese?", "opcoes": ["Açúcar", "Oxigénio", "Dióxido de carbono", "Terra"], "correta": "Dióxido de carbono" },
+            { "id": 2404, "texto": "Qual parte da planta geralmente é a mais colorida para atrair insetos?", "opcoes": ["Raiz", "Folha", "Caule", "Flor"], "correta": "Flor" },
+            { "id": 2405, "texto": "O que a semente de uma planta se torna?", "opcoes": ["Uma nova flor", "Uma nova folha", "Uma nova planta", "Um novo fruto"], "correta": "Uma nova planta" },
+            { "id": 2406, "texto": "Qual parte da planta a sustenta em pé?", "opcoes": ["Caule", "Fruto", "Semente", "Flor"], "correta": "Caule" },
+            { "id": 2407, "texto": "As folhas das árvores são geralmente de que cor?", "opcoes": ["Azul", "Vermelho", "Verde", "Amarelo"], "correta": "Verde" }
+        ]
+      },
+      {
+        "id": 25,
+        "tema": "Geografia: Oceanos",
+        "dificuldade": "Médio",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 2501, "texto": "Qual é o maior oceano do mundo?", "opcoes": ["Atlântico", "Índico", "Ártico", "Pacífico"], "correta": "Pacífico" },
+            { "id": 2502, "texto": "Qual oceano banha a costa leste do Brasil?", "opcoes": ["Pacífico", "Atlântico", "Índico", "Antártico"], "correta": "Atlântico" },
+            { "id": 2503, "texto": "Quantos oceanos existem na Terra?", "opcoes": ["3", "4", "5", "7"], "correta": "5" },
+            { "id": 2504, "texto": "O Mar Mediterrâneo está ligado a qual oceano?", "opcoes": ["Pacífico", "Índico", "Atlântico", "Ártico"], "correta": "Atlântico" },
+            { "id": 2505, "texto": "Qual é o menor e mais raso oceano do mundo?", "opcoes": ["Índico", "Antártico", "Atlântico", "Ártico"], "correta": "Ártico" },
+            { "id": 2506, "texto": "A Grande Barreira de Coral está localizada em qual oceano?", "opcoes": ["Atlântico", "Pacífico", "Índico", "Antártico"], "correta": "Pacífico" },
+            { "id": 2507, "texto": "Qual oceano fica entre a África, a Ásia, a Austrália e a Antártida?", "opcoes": ["Atlântico", "Pacífico", "Índico", "Ártico"], "correta": "Índico" }
+        ]
+      },
+      {
+        "id": 26,
+        "tema": "Artes: Pintores Famosos",
+        "dificuldade": "Difícil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+            { "id": 2601, "texto": "Quem pintou a Mona Lisa?", "opcoes": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"], "correta": "Leonardo da Vinci" },
+            { "id": 2602, "texto": "Qual pintor brasileiro é famoso pelas suas obras com bandeirinhas?", "opcoes": ["Tarsila do Amaral", "Candido Portinari", "Alfredo Volpi", "Di Cavalcanti"], "correta": "Alfredo Volpi" },
+            { "id": 2603, "texto": "Qual artista é conhecido por ter cortado parte da própria orelha?", "opcoes": ["Monet", "Dalí", "Van Gogh", "Renoir"], "correta": "Van Gogh" },
+            { "id": 2604, "texto": "'O Grito' é uma obra famosa de qual pintor?", "opcoes": ["Edvard Munch", "Gustav Klimt", "Wassily Kandinsky", "Paul Klee"], "correta": "Edvard Munch" },
+            { "id": 2605, "texto": "Quem pintou o teto da Capela Sistina?", "opcoes": ["Rafael", "Donatello", "Leonardo da Vinci", "Michelangelo"], "correta": "Michelangelo" },
+            { "id": 2606, "texto": "Qual artista é um dos principais nomes do Cubismo?", "opcoes": ["Salvador Dalí", "Frida Kahlo", "Pablo Picasso", "Andy Warhol"], "correta": "Pablo Picasso" },
+            { "id": 2607, "texto": "Tarsila do Amaral foi uma importante pintora de qual movimento artístico no Brasil?", "opcoes": ["Barroco", "Romantismo", "Modernismo", "Realismo"], "correta": "Modernismo" }
+        ]
+      },
+      {
+        "id": 27,
+        "tema": "Matemática: Divisão",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 10],
+        "perguntas": [
+            { "id": 2701, "texto": "Quanto é 10 dividido por 2?", "opcoes": ["2", "4", "5", "8"], "correta": "5" },
+            { "id": 2702, "texto": "Se 12 bolachas são divididas igualmente entre 3 amigos, quantas cada um recebe?", "opcoes": ["3", "4", "5", "6"], "correta": "4" },
+            { "id": 2703, "texto": "Quanto é 20 ÷ 4?", "opcoes": ["4", "5", "6", "10"], "correta": "5" },
+            { "id": 2704, "texto": "Qual o resultado de 15 a dividir por 3?", "opcoes": ["3", "4", "5", "6"], "correta": "5" },
+            { "id": 2705, "texto": "Tenho 18 lápis para guardar em 2 caixas. Quantos lápis vão em cada caixa?", "opcoes": ["7", "8", "9", "10"], "correta": "9" },
+            { "id": 2706, "texto": "Quanto é 24 dividido por 8?", "opcoes": ["2", "3", "4", "6"], "correta": "3" },
+            { "id": 2707, "texto": "Se um bolo é dividido em 8 fatias e 4 pessoas comem, quantas fatias cada um come (se comerem o mesmo)?", "opcoes": ["1", "2", "3", "4"], "correta": "2" }
+        ]
+      },
+      {
+        "id": 28,
+        "tema": "Português: Classes de Palavras",
+        "dificuldade": "Difícil",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 2801, "texto": "Na frase 'O cão late alto', qual a classe da palavra 'alto'?", "opcoes": ["Substantivo", "Adjetivo", "Verbo", "Advérbio"], "correta": "Advérbio" },
+            { "id": 2802, "texto": "Na frase 'A menina bonita chegou', qual a classe da palavra 'bonita'?", "opcoes": ["Advérbio", "Substantivo", "Adjetivo", "Pronome"], "correta": "Adjetivo" },
+            { "id": 2803, "texto": "Qual destas palavras é um substantivo próprio?", "opcoes": ["País", "Cidade", "Rio", "Brasil"], "correta": "Brasil" },
+            { "id": 2804, "texto": "Na frase 'Ele correu muito', a palavra 'ele' é um...", "opcoes": ["Artigo", "Pronome", "Numeral", "Verbo"], "correta": "Pronome" },
+            { "id": 2805, "texto": "A palavra 'e' é classificada como...", "opcoes": ["Preposição", "Conjunção", "Interjeição", "Advérbio"], "correta": "Conjunção" },
+            { "id": 2806, "texto": "'Ufa!' é um exemplo de...", "opcoes": ["Verbo", "Artigo", "Interjeição", "Numeral"], "correta": "Interjeição" },
+            { "id": 2807, "texto": "Na frase 'A casa de madeira', a palavra 'de' é uma...", "opcoes": ["Conjunção", "Preposição", "Artigo", "Adjetivo"], "correta": "Preposição" }
+        ]
+      },
+      {
+        "id": 29,
+        "tema": "Ciências: Dinossauros",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 9],
+        "perguntas": [
+            { "id": 2901, "texto": "Qual destes dinossauros era um herbívoro com um pescoço muito comprido?", "opcoes": ["Tiranossauro Rex", "Velociraptor", "Braquiossauro", "Triceratops"], "correta": "Braquiossauro" },
+            { "id": 2902, "texto": "O Tiranossauro Rex era carnívoro ou herbívoro?", "opcoes": ["Carnívoro", "Herbívoro", "Omnívoro", "Nenhum"], "correta": "Carnívoro" },
+            { "id": 2903, "texto": "Qual dinossauro tinha três chifres na cabeça?", "opcoes": ["Estegossauro", "Anquilossauro", "Triceratops", "Pterodáctilo"], "correta": "Triceratops" },
+            { "id": 2904, "texto": "O que significa a palavra 'dinossauro'?", "opcoes": ["Pássaro terrível", "Peixe grande", "Lagarto terrível", "Monstro do pântano"], "correta": "Lagarto terrível" },
+            { "id": 2905, "texto": "Qual destes dinossauros tinha placas ósseas nas costas?", "opcoes": ["T-Rex", "Estegossauro", "Velociraptor", "Diplodoco"], "correta": "Estegossauro" },
+            { "id": 2906, "texto": "Os dinossauros viveram na mesma época que os humanos?", "opcoes": ["Sim", "Não", "Apenas alguns", "Só os voadores"], "correta": "Não" },
+            { "id": 2907, "texto": "Qual destes é um dinossauro voador?", "opcoes": ["Iguanodonte", "Pterodáctilo", "Plesiossauro", "T-Rex"], "correta": "Pterodáctilo" }
+        ]
+      },
+      {
+        "id": 30,
+        "tema": "Música: Instrumentos",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 10],
+        "perguntas": [
+            { "id": 3001, "texto": "Qual destes é um instrumento de cordas?", "opcoes": ["Flauta", "Tambor", "Violão", "Trompete"], "correta": "Violão" },
+            { "id": 3002, "texto": "Qual destes é um instrumento de percussão?", "opcoes": ["Piano", "Saxofone", "Bateria", "Violino"], "correta": "Bateria" },
+            { "id": 3003, "texto": "Para tocar uma flauta, o que precisamos de fazer?", "opcoes": ["Bater", "Soprar", "Dedillhar", "Agitar"], "correta": "Soprar" },
+            { "id": 3004, "texto": "O piano tem teclas de que cores?", "opcoes": ["Pretas e vermelhas", "Brancas e azuis", "Pretas e brancas", "Verdes e amarelas"], "correta": "Pretas e brancas" },
+            { "id": 3005, "texto": "Qual instrumento é tocado com um arco?", "opcoes": ["Guitarra", "Harpa", "Violino", "Trombone"], "correta": "Violino" },
+            { "id": 3006, "texto": "Qual destes é um instrumento de sopro feito de metal?", "opcoes": ["Clarinete", "Fagote", "Trompete", "Oboé"], "correta": "Trompete" },
+            { "id": 3007, "texto": "O que produz o som num tambor?", "opcoes": ["Cordas", "Ar", "A vibração da pele", "Teclas"], "correta": "A vibração da pele" }
+        ]
+      },
+      {
+        "id": 31,
+        "tema": "Geografia: Países e Capitais",
+        "dificuldade": "Difícil",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 3101, "texto": "Qual é a capital da Argentina?", "opcoes": ["Santiago", "Lima", "Bogotá", "Buenos Aires"], "correta": "Buenos Aires" },
+            { "id": 3102, "texto": "Qual é a capital do Japão?", "opcoes": ["Pequim", "Seul", "Tóquio", "Banguecoque"], "correta": "Tóquio" },
+            { "id": 3103, "texto": "Qual é a capital de Portugal?", "opcoes": ["Madrid", "Porto", "Lisboa", "Barcelona"], "correta": "Lisboa" },
+            { "id": 3104, "texto": "Qual é a capital do Canadá?", "opcoes": ["Toronto", "Vancouver", "Montreal", "Ottawa"], "correta": "Ottawa" },
+            { "id": 3105, "texto": "Qual é a capital da Austrália?", "opcoes": ["Sydney", "Melbourne", "Camberra", "Perth"], "correta": "Camberra" },
+            { "id": 3106, "texto": "Qual é a capital da Rússia?", "opcoes": ["São Petersburgo", "Moscou", "Kiev", "Varsóvia"], "correta": "Moscou" },
+            { "id": 3107, "texto": "Qual é a capital do Egito?", "opcoes": ["Alexandria", "Gizé", "Luxor", "Cairo"], "correta": "Cairo" }
+        ]
+      },
+      {
+        "id": 32,
+        "tema": "Ciências: Os 5 Sentidos",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 8],
+        "perguntas": [
+            { "id": 3201, "texto": "Qual sentido usamos para ver as cores?", "opcoes": ["Olfato", "Paladar", "Visão", "Audição"], "correta": "Visão" },
+            { "id": 3202, "texto": "Qual sentido usamos para sentir o cheiro das flores?", "opcoes": ["Tato", "Olfato", "Visão", "Paladar"], "correta": "Olfato" },
+            { "id": 3203, "texto": "Qual sentido usamos para ouvir música?", "opcoes": ["Visão", "Paladar", "Tato", "Audição"], "correta": "Audição" },
+            { "id": 3204, "texto": "Qual sentido usamos para saber se algo é doce ou salgado?", "opcoes": ["Olfato", "Paladar", "Tato", "Visão"], "correta": "Paladar" },
+            { "id": 3205, "texto": "Qual sentido usamos para sentir se algo é macio ou áspero?", "opcoes": ["Audição", "Visão", "Olfato", "Tato"], "correta": "Tato" },
+            { "id": 3206, "texto": "Qual órgão usamos para a visão?", "opcoes": ["Ouvidos", "Nariz", "Olhos", "Boca"], "correta": "Olhos" },
+            { "id": 3207, "texto": "Qual órgão usamos para o tato?", "opcoes": ["Pele", "Língua", "Cabelo", "Dentes"], "correta": "Pele" }
+        ]
+      },
+      {
+        "id": 33,
+        "tema": "História: Descobrimentos",
+        "dificuldade": "Médio",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+            { "id": 3301, "texto": "Qual navegador descobriu o caminho marítimo para a Índia?", "opcoes": ["Cristóvão Colombo", "Vasco da Gama", "Fernão de Magalhães", "Pedro Álvares Cabral"], "correta": "Vasco da Gama" },
+            { "id": 3302, "texto": "Cristóvão Colombo chegou à América em que ano?", "opcoes": ["1500", "1498", "1492", "1502"], "correta": "1492" },
+            { "id": 3303, "texto": "Qual navegador foi o primeiro a circum-navegar a Terra?", "opcoes": ["Vasco da Gama", "Cristóvão Colombo", "Bartolomeu Dias", "Fernão de Magalhães"], "correta": "Fernão de Magalhães" },
+            { "id": 3304, "texto": "Qual país europeu liderou o início das Grandes Navegações?", "opcoes": ["Espanha", "Inglaterra", "França", "Portugal"], "correta": "Portugal" },
+            { "id": 3305, "texto": "O que os navegadores europeus procuravam nas Índias?", "opcoes": ["Ouro e prata", "Especiarias", "Escravos", "Novas tecnologias"], "correta": "Especiarias" },
+            { "id": 3306, "texto": "Qual instrumento foi crucial para a navegação em alto mar?", "opcoes": ["Microscópio", "Telescópio", "Astrolábio", "Barómetro"], "correta": "Astrolábio" },
+            { "id": 3307, "texto": "Qual cabo Bartolomeu Dias dobrou, provando que era possível contornar a África?", "opcoes": ["Cabo da Boa Esperança", "Cabo Horn", "Cabo Verde", "Cabo de São Roque"], "correta": "Cabo da Boa Esperança" }
+        ]
+      },
+      {
+        "id": 34,
+        "tema": "Matemática: Unidades de Medida",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 3401, "texto": "Quantos centímetros tem 1 metro?", "opcoes": ["10", "100", "1000", "50"], "correta": "100" },
+            { "id": 3402, "texto": "Quantos gramas tem 1 quilograma?", "opcoes": ["10", "100", "1000", "500"], "correta": "1000" },
+            { "id": 3403, "texto": "Quantos mililitros tem 1 litro?", "opcoes": ["1000", "100", "10", "1"], "correta": "1000" },
+            { "id": 3404, "texto": "Qual unidade de medida usamos para medir a distância entre cidades?", "opcoes": ["Metros", "Centímetros", "Quilómetros", "Milímetros"], "correta": "Quilómetros" },
+            { "id": 3405, "texto": "Quantos minutos tem 1 hora?", "opcoes": ["30", "50", "60", "100"], "correta": "60" },
+            { "id": 3406, "texto": "Se algo pesa 2.5 kg, quantos gramas tem?", "opcoes": ["250g", "25g", "2500g", "2.5g"], "correta": "2500g" },
+            { "id": 3407, "texto": "Qual é maior: 1 km ou 1000 m?", "opcoes": ["1 km", "1000 m", "São iguais", "Depende do terreno"], "correta": "São iguais" }
+        ]
+      },
+      {
+        "id": 35,
+        "tema": "Português: Verbos",
+        "dificuldade": "Difícil",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+            { "id": 3501, "texto": "Qual o tempo verbal da frase 'Eu estudarei amanhã'?", "opcoes": ["Presente", "Pretérito Perfeito", "Futuro do Presente", "Pretérito Imperfeito"], "correta": "Futuro do Presente" },
+            { "id": 3502, "texto": "Qual o modo verbal que expressa uma ordem ou pedido?", "opcoes": ["Indicativo", "Subjuntivo", "Imperativo", "Infinitivo"], "correta": "Imperativo" },
+            { "id": 3503, "texto": "Na frase 'Se eu fosse rico...', o verbo 'fosse' está no modo...", "opcoes": ["Indicativo", "Subjuntivo", "Imperativo", "Participio"], "correta": "Subjuntivo" },
+            { "id": 3504, "texto": "Qual a terminação dos verbos da 1ª conjugação no infinitivo?", "opcoes": ["-ar", "-er", "-ir", "-or"], "correta": "-ar" },
+            { "id": 3505, "texto": "Qual o particípio do verbo 'fazer'?", "opcoes": ["Fazido", "Feito", "Fazer", "Fazendo"], "correta": "Feito" },
+            { "id": 3506, "texto": "'Cantando', 'vendendo' e 'partindo' são exemplos de qual forma nominal?", "opcoes": ["Infinitivo", "Particípio", "Gerúndio", "Subjuntivo"], "correta": "Gerúndio" },
+            { "id": 3507, "texto": "Qual o pretérito perfeito do verbo 'ter' na 1ª pessoa do singular (eu)?", "opcoes": ["Eu tenho", "Eu terei", "Eu tinha", "Eu tive"], "correta": "Eu tive" }
+        ]
+      },
+      {
+        "id": 36,
+        "tema": "Curiosidades Gerais",
+        "dificuldade": "Médio",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 13],
+        "perguntas": [
+            { "id": 3601, "texto": "Qual a montanha mais alta do mundo?", "opcoes": ["Monte Kilimanjaro", "Monte Everest", "K2", "Monte Fuji"], "correta": "Monte Everest" },
+            { "id": 3602, "texto": "Quantos estados tem o Brasil (sem contar o Distrito Federal)?", "opcoes": ["25", "26", "27", "28"], "correta": "26" },
+            { "id": 3603, "texto": "Qual é a cidade mais populosa do mundo?", "opcoes": ["São Paulo", "Xangai", "Tóquio", "Delhi"], "correta": "Tóquio" },
+            { "id": 3604, "texto": "Em que país ficam as pirâmides de Gizé?", "opcoes": ["México", "Grécia", "Egito", "Peru"], "correta": "Egito" },
+            { "id": 3605, "texto": "Qual o animal mais rápido do mundo em terra?", "opcoes": ["Leão", "Guepardo", "Cavalo", "Antílope"], "correta": "Guepardo" },
+            { "id": 3606, "texto": "Quantos planetas existem no nosso Sistema Solar?", "opcoes": ["7", "8", "9", "10"], "correta": "8" },
+            { "id": 3607, "texto": "A Muralha da China foi construída para se proteger de qual povo?", "opcoes": ["Japoneses", "Mongóis", "Russos", "Indianos"], "correta": "Mongóis" }
+        ]
+      },
+      {
+        "id": 37,
+        "tema": "Ciências: Reciclagem",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 10],
+        "perguntas": [
+            { "id": 3701, "texto": "Em qual contentor de reciclagem se deve colocar garrafas de plástico?", "opcoes": ["Azul (Papel)", "Verde (Vidro)", "Amarelo (Metal)", "Vermelho (Plástico)"], "correta": "Vermelho (Plástico)" },
+            { "id": 3702, "texto": "Jornais e revistas devem ser colocados em qual contentor?", "opcoes": ["Azul (Papel)", "Verde (Vidro)", "Amarelo (Metal)", "Vermelho (Plástico)"], "correta": "Azul (Papel)" },
+            { "id": 3703, "texto": "Latas de refrigerante vão para qual contentor?", "opcoes": ["Verde", "Vermelho", "Azul", "Amarelo"], "correta": "Amarelo" },
+            { "id": 3704, "texto": "Copos de vidro partidos devem ir para o contentor...", "opcoes": ["Verde", "Amarelo", "Vermelho", "Lixo comum"], "correta": "Verde" },
+            { "id": 3705, "texto": "O que significa o símbolo de três setas a formar um triângulo?", "opcoes": ["Perigo", "Frágil", "Reciclável", "Inflamável"], "correta": "Reciclável" },
+            { "id": 3706, "texto": "Reciclar ajuda a...", "opcoes": ["Poluir mais o ar", "Gastar mais água", "Economizar recursos naturais", "Criar mais lixo"], "correta": "Economizar recursos naturais" },
+            { "id": 3707, "texto": "Podemos reciclar pilhas e baterias no lixo comum?", "opcoes": ["Sim, sempre", "Apenas as pequenas", "Não, devem ser descartadas em locais próprios", "Sim, se estiverem descarregadas"], "correta": "Não, devem ser descartadas em locais próprios" }
+        ]
+      },
+      {
+        "id": 38,
+        "tema": "Geografia: Capitais da Europa",
+        "dificuldade": "Difícil",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+            { "id": 3801, "texto": "Qual é a capital da França?", "opcoes": ["Londres", "Berlim", "Madrid", "Paris"], "correta": "Paris" },
+            { "id": 3802, "texto": "Qual é a capital da Itália?", "opcoes": ["Roma", "Atenas", "Lisboa", "Veneza"], "correta": "Roma" },
+            { "id": 3803, "texto": "Qual é a capital da Alemanha?", "opcoes": ["Munique", "Hamburgo", "Frankfurt", "Berlim"], "correta": "Berlim" },
+            { "id": 3804, "texto": "Qual é a capital do Reino Unido?", "opcoes": ["Dublin", "Edimburgo", "Londres", "Manchester"], "correta": "Londres" },
+            { "id": 3805, "texto": "Qual é a capital da Grécia?", "opcoes": ["Istambul", "Atenas", "Sofia", "Tirana"], "correta": "Atenas" },
+            { "id": 3806, "texto": "Qual é a capital da Noruega?", "opcoes": ["Estocolmo", "Copenhaga", "Helsínquia", "Oslo"], "correta": "Oslo" },
+            { "id": 3807, "texto": "Qual é a capital da Polónia?", "opcoes": ["Praga", "Budapeste", "Varsóvia", "Viena"], "correta": "Varsóvia" }
+        ]
+      },
+      {
+        "id": 39,
+        "tema": "História: Segunda Guerra Mundial",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [13, 15],
+        "perguntas": [
+            { "id": 3901, "texto": "Em que ano começou a Segunda Guerra Mundial?", "opcoes": ["1935", "1939", "1941", "1945"], "correta": "1939" },
+            { "id": 3902, "texto": "Qual evento marcou o fim da guerra na Europa?", "opcoes": ["O Dia D", "A Batalha de Stalingrado", "A rendição da Alemanha", "O ataque a Pearl Harbor"], "correta": "A rendição da Alemanha" },
+            { "id": 3903, "texto": "Qual era o nome do grupo de países liderado pela Alemanha, Itália e Japão?", "opcoes": ["Aliados", "Tríplice Entente", "Eixo", "Potências Centrais"], "correta": "Eixo" },
+            { "id": 3904, "texto": "Qual evento levou os Estados Unidos a entrar na guerra?", "opcoes": ["A invasão da Polónia", "O ataque a Pearl Harbor", "A Batalha da Grã-Bretanha", "A queda da França"], "correta": "O ataque a Pearl Harbor" },
+            { "id": 3905, "texto": "O desembarque na Normandia é conhecido como...", "opcoes": ["Dia da Vitória", "Operação Barbarossa", "Dia D", "Batalha das Ardenas"], "correta": "Dia D" },
+            { "id": 3906, "texto": "Quem era o líder da União Soviética durante a guerra?", "opcoes": ["Lenin", "Trotsky", "Stalin", "Khrushchev"], "correta": "Stalin" },
+            { "id": 3907, "texto": "O que foi o Holocausto?", "opcoes": ["Uma grande batalha", "O genocídio de judeus e outras minorias pelos nazis", "Um tratado de paz", "Uma crise económica"], "correta": "O genocídio de judeus e outras minorias pelos nazis" }
+        ]
+      },
+      {
+        "id": 40,
+        "tema": "Matemática: Geometria Plana",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+            { "id": 4001, "texto": "Qual o nome do polígono de 5 lados?", "opcoes": ["Hexágono", "Pentágono", "Heptágono", "Octógono"], "correta": "Pentágono" },
+            { "id": 4002, "texto": "A soma dos ângulos internos de qualquer triângulo é sempre...", "opcoes": ["90 graus", "180 graus", "360 graus", "Depende do triângulo"], "correta": "180 graus" },
+            { "id": 4003, "texto": "Como se calcula a área de um retângulo?", "opcoes": ["Lado x Lado", "Base x Altura", "Somando os lados", "Base x Altura / 2"], "correta": "Base x Altura" },
+            { "id": 4004, "texto": "Qual é o nome de uma linha que vai de uma ponta à outra de um círculo, passando pelo centro?", "opcoes": ["Raio", "Corda", "Diâmetro", "Tangente"], "correta": "Diâmetro" },
+            { "id": 4005, "texto": "Um polígono com 8 lados é um...", "opcoes": ["Hexágono", "Decágono", "Heptágono", "Octógono"], "correta": "Octógono" },
+            { "id": 4006, "texto": "O que é um ângulo reto?", "opcoes": ["Um ângulo menor que 90 graus", "Um ângulo de 90 graus", "Um ângulo maior que 90 graus", "Um ângulo de 180 graus"], "correta": "Um ângulo de 90 graus" },
+            { "id": 4007, "texto": "Qual o perímetro de um quadrado com lado de 5 cm?", "opcoes": ["25 cm", "10 cm", "20 cm", "15 cm"], "correta": "20 cm" }
+        ]
+      },
+      {
+        "id": 41,
+        "tema": "Português: Acentuação",
+        "dificuldade": "Médio",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 4101, "texto": "Qual palavra está acentuada corretamente?", "opcoes": ["Parabens", "Parabéns", "Parábens", "Para-bens"], "correta": "Parabéns" },
+            { "id": 4102, "texto": "Por que a palavra 'história' é acentuada?", "opcoes": ["É uma oxítona terminada em 'a'", "É uma proparoxítona", "É uma paroxítona terminada em ditongo", "Não devia ser acentuada"], "correta": "É uma paroxítona terminada em ditongo" },
+            { "id": 4103, "texto": "Qual destas palavras é proparoxítona?", "opcoes": ["Abacaxi", "Lâmpada", "Café", "Fácil"], "correta": "Lâmpada" },
+            { "id": 4104, "texto": "A palavra 'saúde' tem acento porquê?", "opcoes": ["É um hiato com 'u' tónico", "É uma oxítona", "É uma paroxítona", "Regra especial"], "correta": "É um hiato com 'u' tónico" },
+            { "id": 4105, "texto": "Qual a única palavra que NÃO deveria ter acento?", "opcoes": ["Herói", "Idéia", "Chapéu", "Anéis"], "correta": "Idéia" },
+            { "id": 4106, "texto": "A palavra 'táxi' é acentuada por ser uma...", "opcoes": ["Oxítona terminada em 'i'", "Proparoxítona", "Monossílabo tónico", "Paroxítona terminada em 'i'"], "correta": "Paroxítona terminada em 'i'" },
+            { "id": 4107, "texto": "Qual destas palavras é uma oxítona?", "opcoes": ["Mesa", "Árvore", "Pássaro", "Vatapá"], "correta": "Vatapá" }
+        ]
+      },
+      {
+        "id": 42,
+        "tema": "Ciências: Alimentação Saudável",
+        "dificuldade": "Fácil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 10],
+        "perguntas": [
+            { "id": 4201, "texto": "Qual destes alimentos é uma fonte de proteína?", "opcoes": ["Maçã", "Pão", "Frango", "Alface"], "correta": "Frango" },
+            { "id": 4202, "texto": "Qual destes é considerado um vegetal?", "opcoes": ["Banana", "Arroz", "Cenoura", "Queijo"], "correta": "Cenoura" },
+            { "id": 4203, "texto": "Beber água é importante para o corpo?", "opcoes": ["Sim", "Não", "Só quando está calor", "Só para atletas"], "correta": "Sim" },
+            { "id": 4204, "texto": "O que devemos comer com moderação?", "opcoes": ["Frutas", "Legumes", "Doces", "Água"], "correta": "Doces" },
+            { "id": 4205, "texto": "Qual destes grupos de alimentos nos dá mais energia?", "opcoes": ["Frutas", "Carboidratos (pão, massa)", "Verduras", "Proteínas"], "correta": "Carboidratos (pão, massa)" },
+            { "id": 4206, "texto": "O cálcio, importante para os ossos, é encontrado em qual alimento?", "opcoes": ["Laranja", "Leite", "Carne", "Pão"], "correta": "Leite" },
+            { "id": 4207, "texto": "Comer muitas frutas e legumes é bom para a...", "opcoes": ["Visão", "Força", "Saúde em geral", "Inteligência"], "correta": "Saúde em geral" }
+        ]
+      },
+      {
+        "id": 43,
+        "tema": "Desportos",
+        "dificuldade": "Médio",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 12],
+        "perguntas": [
+            { "id": 4301, "texto": "Quantos jogadores tem uma equipa de futebol em campo?", "opcoes": ["9", "10", "11", "12"], "correta": "11" },
+            { "id": 4302, "texto": "Em que desporto se usa uma cesta?", "opcoes": ["Voleibol", "Ténis", "Andebol", "Basquetebol"], "correta": "Basquetebol" },
+            { "id": 4303, "texto": "Os Jogos Olímpicos acontecem de quantos em quantos anos?", "opcoes": ["2 anos", "3 anos", "4 anos", "5 anos"], "correta": "4 anos" },
+            { "id": 4304, "texto": "Qual é o principal objetivo do voleibol?", "opcoes": ["Marcar golos", "Fazer a bola tocar no chão da quadra adversária", "Acertar numa cesta", "Correr o mais rápido possível"], "correta": "Fazer a bola tocar no chão da quadra adversária" },
+            { "id": 4305, "texto": "Qual destes desportos é praticado na água?", "opcoes": ["Ginástica", "Atletismo", "Natação", "Ciclismo"], "correta": "Natação" },
+            { "id": 4306, "texto": "No ténis, uma pontuação de 40-40 é chamada de...", "opcoes": ["Match point", "Game point", "Break point", "Deuce"], "correta": "Deuce" },
+            { "id": 4307, "texto": "Qual país é famoso por inventar o judo?", "opcoes": ["China", "Coreia do Sul", "Japão", "Brasil"], "correta": "Japão" }
+        ]
+      },
+      {
+        "id": 44,
+        "tema": "Geografia: Relevo",
+        "dificuldade": "Difícil",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 14],
+        "perguntas": [
+            { "id": 4401, "texto": "Qual é a forma de relevo caracterizada por superfícies elevadas e planas?", "opcoes": ["Montanha", "Planície", "Planalto", "Depressão"], "correta": "Planalto" },
+            { "id": 4402, "texto": "Como se chama uma grande elevação de terra?", "opcoes": ["Morro", "Colina", "Serra", "Montanha"], "correta": "Montanha" },
+            { "id": 4403, "texto": "Áreas baixas e planas, geralmente perto de rios, são chamadas de...", "opcoes": ["Planaltos", "Montanhas", "Vales", "Planícies"], "correta": "Planícies" },
+            { "id": 4404, "texto": "O que é um conjunto de montanhas alinhadas?", "opcoes": ["Um pico", "Uma cordilheira", "Uma chapada", "Um vale"], "correta": "Uma cordilheira" },
+            { "id": 4405, "texto": "O que é uma depressão no relevo?", "opcoes": ["Uma área mais alta que as vizinhas", "Uma área mais baixa que as vizinhas", "Uma área plana no topo de uma montanha", "Uma praia"], "correta": "Uma área mais baixa que as vizinhas" },
+            { "id": 4406, "texto": "A Cordilheira dos Andes está localizada em que continente?", "opcoes": ["Ásia", "Europa", "América do Sul", "África"], "correta": "América do Sul" },
+            { "id": 4407, "texto": "A erosão é um processo que...", "opcoes": ["Cria montanhas", "Desgasta e transporta o relevo", "Aumenta a altitude", "Cria vulcões"], "correta": "Desgasta e transporta o relevo" }
+        ]
+      },
+      {
+        "id": 45,
+        "tema": "História: Revolução Francesa",
+        "dificuldade": "Difícil",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [13, 15],
+        "perguntas": [
+            { "id": 4501, "texto": "Qual era o lema da Revolução Francesa?", "opcoes": ["Ordem e Progresso", "Liberdade, Igualdade, Fraternidade", "Paz, Pão e Terra", "Um por todos, todos por um"], "correta": "Liberdade, Igualdade, Fraternidade" },
+            { "id": 4502, "texto": "A Queda da Bastilha, marco da revolução, ocorreu em que ano?", "opcoes": ["1789", "1799", "1804", "1776"], "correta": "1789" },
+            { "id": 4503, "texto": "Quem era o rei da França durante a revolução?", "opcoes": ["Luís XIV", "Luís XV", "Luís XVI", "Napoleão Bonaparte"], "correta": "Luís XVI" },
+            { "id": 4504, "texto": "Qual instrumento foi largamente utilizado para execuções durante o Período do Terror?", "opcoes": ["Forca", "Fogueira", "Espada", "Guilhotina"], "correta": "Guilhotina" },
+            { "id": 4505, "texto": "Qual líder jacobino se tornou a figura central do Período do Terror?", "opcoes": ["Danton", "Marat", "Robespierre", "Lafayette"], "correta": "Robespierre" },
+            { "id": 4506, "texto": "Qual general chegou ao poder no final da Revolução Francesa?", "opcoes": ["Robespierre", "Luís XVI", "Napoleão Bonaparte", "Marquês de Lafayette"], "correta": "Napoleão Bonaparte" },
+            { "id": 4507, "texto": "A sociedade francesa antes da revolução era dividida em três...", "opcoes": ["Classes", "Partidos", "Reinos", "Estados (ou Ordens)"], "correta": "Estados (ou Ordens)" }
+        ]
+      },
+      {
+        "id": 46,
+        "tema": "Português: Figuras de Linguagem",
+        "dificuldade": "Difícil",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [13, 15],
+        "perguntas": [
+            { "id": 4601, "texto": "Na frase 'Choveu uma tempestade de lágrimas', qual figura de linguagem está presente?", "opcoes": ["Metáfora", "Hipérbole", "Ironia", "Personificação"], "correta": "Hipérbole" },
+            { "id": 4602, "texto": "'O vento beijava os seus cabelos' é um exemplo de:", "opcoes": ["Comparação", "Eufemismo", "Metonímia", "Personificação"], "correta": "Personificação" },
+            { "id": 4603, "texto": "Na frase 'Ele é forte como um touro', temos uma:", "opcoes": ["Metáfora", "Hipérbole", "Comparação", "Ironia"], "correta": "Comparação" },
+            { "id": 4604, "texto": "'Ela é uma flor' é um exemplo de:", "opcoes": ["Comparação", "Metáfora", "Hipérbole", "Eufemismo"], "correta": "Metáfora" },
+            { "id": 4605, "texto": "Dizer 'ele partiu desta para uma melhor' em vez de 'ele morreu' é um:", "opcoes": ["Paradoxo", "Eufemismo", "Antítese", "Pleonasmo"], "correta": "Eufemismo" },
+            { "id": 4606, "texto": "A frase 'Que pessoa inteligente! Tirou zero no teste.' contém qual figura?", "opcoes": ["Ironia", "Sarcasmo", "Paradoxo", "Hipérbole"], "correta": "Ironia" },
+            { "id": 4607, "texto": "Na frase 'Li Machado de Assis', qual figura de linguagem ocorre?", "opcoes": ["Metáfora", "Sinestesia", "Metonímia", "Catacrese"], "correta": "Metonímia" }
+        ]
+      },
+      {
+        "id": 47,
+        "tema": "Ciências: Ecossistemas",
+        "dificuldade": "Médio",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+            { "id": 4701, "texto": "Qual destes é um exemplo de ecossistema aquático?", "opcoes": ["Floresta", "Deserto", "Recife de coral", "Savana"], "correta": "Recife de coral" },
+            { "id": 4702, "texto": "Os produtores numa cadeia alimentar são geralmente...", "opcoes": ["Animais carnívoros", "Animais herbívoros", "Plantas", "Fungos"], "correta": "Plantas" },
+            { "id": 4703, "texto": "O que é um ecossistema?", "opcoes": ["Apenas os animais de um lugar", "Apenas as plantas de um lugar", "A interação entre os seres vivos e o ambiente", "Apenas o clima de uma região"], "correta": "A interação entre os seres vivos e o ambiente" },
+            { "id": 4704, "texto": "Qual destes é um fator abiótico de um ecossistema?", "opcoes": ["Plantas", "Animais", "Água", "Bactérias"], "correta": "Água" },
+            { "id": 4705, "texto": "Animais que se alimentam de plantas são chamados de...", "opcoes": ["Carnívoros", "Herbívoros", "Omnívoros", "Decompositores"], "correta": "Herbívoros" },
+            { "id": 4706, "texto": "Qual o maior ecossistema brasileiro?", "opcoes": ["Mata Atlântica", "Cerrado", "Pampa", "Floresta Amazónica"], "correta": "Floresta Amazónica" },
+            { "id": 4707, "texto": "Qual o papel dos fungos e bactérias numa cadeia alimentar?", "opcoes": ["Produtores", "Consumidores primários", "Consumidores secundários", "Decompositores"], "correta": "Decompositores" }
+        ]
+      },
+      {
+        "id": 48,
+        "tema": "Matemática: Porcentagem",
+        "dificuldade": "Difícil",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 4801, "texto": "Quanto é 50% de 200?", "opcoes": ["25", "50", "100", "150"], "correta": "100" },
+            { "id": 4802, "texto": "Se um produto custa 80 reais e tem 10% de desconto, qual o novo preço?", "opcoes": ["70 reais", "72 reais", "8 reais", "75 reais"], "correta": "72 reais" },
+            { "id": 4803, "texto": "Quanto é 25% em forma de fração irredutível?", "opcoes": ["1/2", "1/4", "1/5", "25/100"], "correta": "1/4" },
+            { "id": 4804, "texto": "Numa turma de 30 alunos, 20% são meninas. Quantos meninos há na turma?", "opcoes": ["6", "10", "20", "24"], "correta": "24" },
+            { "id": 4805, "texto": "Aumentar um valor em 100% é o mesmo que...", "opcoes": ["Mantê-lo igual", "Dividi-lo por 2", "Multiplicá-lo por 2", "Somar 100"], "correta": "Multiplicá-lo por 2" },
+            { "id": 4806, "texto": "Quanto é 1% de 500?", "opcoes": ["0.5", "5", "50", "1"], "correta": "5" },
+            { "id": 4807, "texto": "Se acertei 15 de 20 questões, qual a minha porcentagem de acertos?", "opcoes": ["15%", "50%", "75%", "80%"], "correta": "75%" }
+        ]
+      },
+      {
+        "id": 49,
+        "tema": "Folclore Brasileiro",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 10],
+        "perguntas": [
+            { "id": 4901, "texto": "Qual personagem do folclore tem uma perna só e usa um gorro vermelho?", "opcoes": ["Curupira", "Boitatá", "Saci-Pererê", "Boto cor-de-rosa"], "correta": "Saci-Pererê" },
+            { "id": 4902, "texto": "Qual personagem protege as matas e tem os pés virados para trás?", "opcoes": ["Mula sem cabeça", "Lobisomem", "Curupira", "Iara"], "correta": "Curupira" },
+            { "id": 4903, "texto": "A Cuca é uma personagem famosa das histórias de qual autor?", "opcoes": ["Ziraldo", "Maurício de Sousa", "Monteiro Lobato", "Ana Maria Machado"], "correta": "Monteiro Lobato" },
+            { "id": 4904, "texto": "Qual lenda fala de uma serpente de fogo que protege os campos?", "opcoes": ["Iara", "Boitatá", "Boto", "Caipora"], "correta": "Boitatá" },
+            { "id": 4905, "texto": "Qual personagem é uma sereia que atrai os homens com seu canto?", "opcoes": ["Cuca", "Iara", "Mula sem cabeça", "Vitória-régia"], "correta": "Iara" },
+            { "id": 4906, "texto": "O Lobisomem, segundo a lenda, transforma-se em noites de...", "opcoes": ["Lua nova", "Lua cheia", "Carnaval", "Natal"], "correta": "Lua cheia" },
+            { "id": 4907, "texto": "Qual personagem é conhecido por se transformar num belo rapaz para conquistar moças?", "opcoes": ["Saci", "Curupira", "Boto cor-de-rosa", "Negrinho do Pastoreio"], "correta": "Boto cor-de-rosa" }
+        ]
+      },
+      {
+        "id": 50,
+        "tema": "Geografia: Climas do Brasil",
+        "dificuldade": "Difícil",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [12, 14],
+        "perguntas": [
+            { "id": 5001, "texto": "Qual tipo de clima predomina na região Norte do Brasil?", "opcoes": ["Tropical", "Equatorial", "Semiárido", "Subtropical"], "correta": "Equatorial" },
+            { "id": 5002, "texto": "O clima subtropical, com estações bem definidas, é típico de qual região?", "opcoes": ["Norte", "Nordeste", "Centro-Oeste", "Sul"], "correta": "Sul" },
+            { "id": 5003, "texto": "O Sertão Nordestino é caracterizado por qual tipo de clima?", "opcoes": ["Equatorial", "Tropical de altitude", "Litorâneo húmido", "Semiárido"], "correta": "Semiárido" },
+            { "id": 5004, "texto": "Qual fator geográfico mais influencia o clima no Brasil?", "opcoes": ["Altitude", "Latitude", "Maritimidade", "Relevo"], "correta": "Latitude" },
+            { "id": 5005, "texto": "O clima Tropical de Altitude é encontrado em qual região?", "opcoes": ["Na Amazónia", "No litoral nordestino", "Em áreas serranas do Sudeste", "No Pantanal"], "correta": "Em áreas serranas do Sudeste" },
+            { "id": 5006, "texto": "Como são as chuvas no clima Equatorial?", "opcoes": ["Raras e irregulares", "Concentradas no inverno", "Abundantes e bem distribuídas o ano todo", "Inexistentes"], "correta": "Abundantes e bem distribuídas o ano todo" },
+            { "id": 5007, "texto": "Que fenómeno climático causa geadas na região Sul?", "opcoes": ["El Niño", "Frentes frias (massa polar atlântica)", "Monções", "Ressacas"], "correta": "Frentes frias (massa polar atlântica)" }
+        ]
+      },
+      {
+        "id": 51,
+        "tema": "Inglês Básico: Cores",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [7, 9],
+        "perguntas": [
+            { "id": 5101, "texto": "Como se diz 'vermelho' em inglês?", "opcoes": ["Blue", "Green", "Red", "Yellow"], "correta": "Red" },
+            { "id": 5102, "texto": "Qual a tradução de 'black'?", "opcoes": ["Branco", "Preto", "Cinza", "Roxo"], "correta": "Preto" },
+            { "id": 5103, "texto": "A cor do sol em inglês é...", "opcoes": ["Orange", "Yellow", "Gold", "Sun"], "correta": "Yellow" },
+            { "id": 5104, "texto": "'White' é a cor...", "opcoes": ["Do céu", "Da neve", "Da relva", "Da noite"], "correta": "Da neve" },
+            { "id": 5105, "texto": "Como se diz 'roxo' em inglês?", "opcoes": ["Pink", "Brown", "Purple", "Gray"], "correta": "Purple" },
+            { "id": 5106, "texto": "A cor 'green' é a cor de qual destes?", "opcoes": ["Morango", "Cenoura", "Folha de árvore", "Banana"], "correta": "Folha de árvore" },
+            { "id": 5107, "texto": "Qual a tradução de 'blue'?", "opcoes": ["Azul", "Rosa", "Laranja", "Marrom"], "correta": "Azul" }
+        ]
+      },
+      {
+        "id": 52,
+        "tema": "Ciências: Animais Invertebrados",
+        "dificuldade": "Médio",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 5201, "texto": "Qual destes animais NÃO tem coluna vertebral?", "opcoes": ["Cão", "Peixe", "Minhoca", "Gato"], "correta": "Minhoca" },
+            { "id": 5202, "texto": "Borboletas e abelhas pertencem a qual grupo?", "opcoes": ["Mamíferos", "Répteis", "Anfíbios", "Insetos"], "correta": "Insetos" },
+            { "id": 5203, "texto": "Qual animal marinho tem tentáculos com células urticantes?", "opcoes": ["Estrela-do-mar", "Polvo", "Água-viva", "Caranguejo"], "correta": "Água-viva" },
+            { "id": 5204, "texto": "O caracol é um exemplo de qual tipo de invertebrado?", "opcoes": ["Inseto", "Aracnídeo", "Crustáceo", "Molusco"], "correta": "Molusco" },
+            { "id": 5205, "texto": "Quantas pernas tem um inseto?", "opcoes": ["4", "6", "8", "10"], "correta": "6" },
+            { "id": 5206, "texto": "Qual destes animais vive no mar e tem o corpo coberto por espinhos?", "opcoes": ["Ouriço-do-mar", "Lula", "Camarão", "Mexilhão"], "correta": "Ouriço-do-mar" },
+            { "id": 5207, "texto": "A aranha é um...", "opcoes": ["Inseto", "Crustáceo", "Molusco", "Aracnídeo"], "correta": "Aracnídeo" }
+        ]
+      },
+      {
+        "id": 53,
+        "tema": "História do Brasil: Proclamação da República",
+        "dificuldade": "Médio",
+        "categoria": "historia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+            { "id": 5301, "texto": "Em que ano foi proclamada a República no Brasil?", "opcoes": ["1822", "1888", "1889", "1900"], "correta": "1889" },
+            { "id": 5302, "texto": "Quem foi o primeiro presidente do Brasil?", "opcoes": ["Dom Pedro II", "Getúlio Vargas", "Marechal Deodoro da Fonseca", "Prudente de Morais"], "correta": "Marechal Deodoro da Fonseca" },
+            { "id": 5303, "texto": "Qual era o sistema de governo do Brasil antes da República?", "opcoes": ["Ditadura", "Democracia", "Monarquia", "Parlamentarismo"], "correta": "Monarquia" },
+            { "id": 5304, "texto": "Quem era o imperador do Brasil na época da Proclamação da República?", "opcoes": ["Dom João VI", "Dom Pedro I", "Dom Pedro II", "Princesa Isabel"], "correta": "Dom Pedro II" },
+            { "id": 5305, "texto": "Em que dia e mês se comemora a Proclamação da República?", "opcoes": ["7 de Setembro", "21 de Abril", "12 de Outubro", "15 de Novembro"], "correta": "15 de Novembro" },
+            { "id": 5306, "texto": "A Proclamação da República foi um movimento principalmente...", "opcoes": ["Popular, com a participação do povo", "Religioso, liderado pela Igreja", "Militar, liderado pelo Exército", "Económico, liderado pelos fazendeiros"], "correta": "Militar, liderado pelo Exército" },
+            { "id": 5307, "texto": "Após a proclamação, o que aconteceu com a família imperial?", "opcoes": ["Foram presos", "Foram exilados para a Europa", "Continuaram a viver no Brasil", "Foram coroados presidentes"], "correta": "Foram exilados para a Europa" }
+        ]
+      },
+      {
+        "id": 54,
+        "tema": "Matemática: Números Romanos",
+        "dificuldade": "Médio",
+        "categoria": "matematica",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [9, 11],
+        "perguntas": [
+            { "id": 5401, "texto": "Qual número o algarismo romano 'V' representa?", "opcoes": ["1", "5", "10", "50"], "correta": "5" },
+            { "id": 5402, "texto": "Como se escreve o número 9 em algarismos romanos?", "opcoes": ["VIIII", "IX", "IV", "XI"], "correta": "IX" },
+            { "id": 5403, "texto": "Qual o valor de 'X'?", "opcoes": ["1", "5", "10", "100"], "correta": "10" },
+            { "id": 5404, "texto": "Qual o valor de 'L'?", "opcoes": ["5", "10", "50", "100"], "correta": "50" },
+            { "id": 5405, "texto": "O número 'IV' representa qual valor?", "opcoes": ["4", "6", "9", "11"], "correta": "4" },
+            { "id": 5406, "texto": "Como se escreve o número 55 em algarismos romanos?", "opcoes": ["LL", "VC", "LV", "VL"], "correta": "LV" },
+            { "id": 5407, "texto": "Qual o valor de 'C'?", "opcoes": ["10", "50", "100", "500"], "correta": "100" }
+        ]
+      },
+      {
+        "id": 55,
+        "tema": "Português: Coletivos",
+        "dificuldade": "Fácil",
+        "categoria": "portugues",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [8, 10],
+        "perguntas": [
+            { "id": 5501, "texto": "Qual o coletivo de 'peixes'?", "opcoes": ["Manada", "Cardume", "Alcateia", "Rebanho"], "correta": "Cardume" },
+            { "id": 5502, "texto": "Qual o coletivo de 'livros'?", "opcoes": ["Pinacoteca", "Discoteca", "Biblioteca", "Hemeroteca"], "correta": "Biblioteca" },
+            { "id": 5503, "texto": "Qual o coletivo de 'lobos'?", "opcoes": ["Matilha", "Bando", "Alcateia", "Vara"], "correta": "Alcateia" },
+            { "id": 5504, "texto": "Qual o coletivo de 'estrelas'?", "opcoes": ["Arquipélago", "Constelação", "Esquadra", "Frota"], "correta": "Constelação" },
+            { "id": 5505, "texto": "Qual o coletivo de 'aviões'?", "opcoes": ["Esquadrilha", "Frota", "Batalhão", "Tropa"], "correta": "Esquadrilha" },
+            { "id": 5506, "texto": "Qual o coletivo de 'abelhas'?", "opcoes": ["Ninhada", "Colmeia", "Enxame", "Bando"], "correta": "Enxame" },
+            { "id": 5507, "texto": "Qual o coletivo de 'ilhas'?", "opcoes": ["Cordilheira", "Arquipélago", "Península", "Continente"], "correta": "Arquipélago" }
+        ]
+      },
+      {
+        "id": 56,
+        "tema": "Profissões",
+        "dificuldade": "Fácil",
+        "categoria": "geral",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [6, 8],
+        "perguntas": [
+            { "id": 5601, "texto": "Quem apaga incêndios?", "opcoes": ["Médico", "Professor", "Bombeiro", "Cozinheiro"], "correta": "Bombeiro" },
+            { "id": 5602, "texto": "Quem cuida dos dentes das pessoas?", "opcoes": ["Veterinário", "Engenheiro", "Dentista", "Jornalista"], "correta": "Dentista" },
+            { "id": 5603, "texto": "Quem ensina os alunos na escola?", "opcoes": ["Polícia", "Professor", "Motorista", "Ator"], "correta": "Professor" },
+            { "id": 5604, "texto": "Quem cuida de animais doentes?", "opcoes": ["Médico", "Enfermeiro", "Veterinário", "Biólogo"], "correta": "Veterinário" },
+            { "id": 5605, "texto": "Quem entrega as cartas em nossa casa?", "opcoes": ["Carteiro", "Piloto", "Padeiro", "Cantor"], "correta": "Carteiro" },
+            { "id": 5606, "texto": "Quem faz pão?", "opcoes": ["Serralheiro", "Padeiro", "Sapateiro", "Jardineiro"], "correta": "Padeiro" },
+            { "id": 5607, "texto": "Quem constrói casas e prédios?", "opcoes": ["Pintor", "Advogado", "Pedreiro", "Músico"], "correta": "Pedreiro" }
+        ]
+      },
+      {
+        "id": 57,
+        "tema": "Ciências: Forças e Movimento",
+        "dificuldade": "Difícil",
+        "categoria": "ciencias",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [11, 13],
+        "perguntas": [
+            { "id": 5701, "texto": "Qual força nos mantém presos ao chão?", "opcoes": ["Força magnética", "Força de atrito", "Força elástica", "Força da gravidade"], "correta": "Força da gravidade" },
+            { "id": 5702, "texto": "Quem formulou as leis do movimento e da gravitação universal?", "opcoes": ["Galileu Galilei", "Albert Einstein", "Isaac Newton", "Nikola Tesla"], "correta": "Isaac Newton" },
+            { "id": 5703, "texto": "A resistência que uma superfície oferece ao movimento de um objeto é chamada de...", "opcoes": ["Inércia", "Aceleração", "Atrito", "Peso"], "correta": "Atrito" },
+            { "id": 5704, "texto": "O que é inércia?", "opcoes": ["A força que puxa os objetos para baixo", "A tendência de um objeto de resistir a mudanças no seu estado de movimento", "A rapidez com que um objeto se move", "A quantidade de matéria num objeto"], "correta": "A tendência de um objeto de resistir a mudanças no seu estado de movimento" },
+            { "id": 5705, "texto": "A segunda lei de Newton relaciona força, massa e...", "opcoes": ["Velocidade", "Distância", "Aceleração", "Tempo"], "correta": "Aceleração" },
+            { "id": 5706, "texto": "Para toda ação, há uma reação igual e oposta. Esta é a...", "opcoes": ["Primeira Lei de Newton", "Segunda Lei de Newton", "Terceira Lei de Newton", "Lei da Gravidade"], "correta": "Terceira Lei de Newton" },
+            { "id": 5707, "texto": "O que acontece com a velocidade de um objeto em queda livre (sem resistência do ar)?", "opcoes": ["Diminui", "Permanece constante", "Aumenta constantemente", "Varia aleatoriamente"], "correta": "Aumenta constantemente" }
+        ]
+      },
+      {
+        "id": 58,
+        "tema": "Geografia: Relevo e Hidrografia",
+        "dificuldade": "Médio",
+        "categoria": "geografia",
+        "professor_cpf": "00000000000",
+        "idade_recomendada": [10, 12],
+        "perguntas": [
+          { "id": 5801, "texto": "O que é um afluente?", "opcoes": ["Um rio que seca no verão", "Um rio que desagua no mar", "Um rio menor que desagua num rio principal", "A nascente de um rio"], "correta": "Um rio menor que desagua num rio principal" },
+          { "id": 5802, "texto": "Qual o nome da linha imaginária que divide a Terra em hemisfério Norte e Sul?", "opcoes": ["Trópico de Câncer", "Meridiano de Greenwich", "Linha do Equador", "Trópico de Capricórnio"], "correta": "Linha do Equador" },
+          { "id": 5803, "texto": "Onde fica a nascente de um rio?", "opcoes": ["Na foz", "Na parte mais alta do seu percurso", "No meio do rio", "Onde ele desagua"], "correta": "Na parte mais alta do seu percurso" },
+          { "id": 5804, "texto": "Qual o ponto mais alto do Brasil?", "opcoes": ["Pico da Neblina", "Pico das Agulhas Negras", "Monte Roraima", "Pico da Bandeira"], "correta": "Pico da Neblina" },
+          { "id": 5805, "texto": "O que é uma bacia hidrográfica?", "opcoes": ["Uma grande piscina natural", "Uma área drenada por um rio principal e seus afluentes", "Um tipo de lagoa", "Um reservatório de água subterrânea"], "correta": "Uma área drenada por um rio principal e seus afluentes" },
+          { "id": 5806, "texto": "A Foz do Rio Amazonas é no Oceano...", "opcoes": ["Pacífico", "Índico", "Glacial Ártico", "Atlântico"], "correta": "Atlântico" },
+          { "id": 5807, "texto": "O Pantanal é a maior... do mundo.", "opcoes": ["Floresta tropical", "Planície de inundação", "Cordilheira", "Depressão"], "correta": "Planície de inundação" }
+        ]
+      }
+]

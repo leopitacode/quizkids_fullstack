@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block title %}Relatório de {{ student.nome }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <a href="{{ url_for('portal_professor') }}" class="btn btn-secondary" style="margin-bottom: 2rem;">&larr; Voltar ao Painel</a>
+    <h1 class="portal-title">Relatório de Desempenho</h1>
+    <h2 class="subtitle" style="font-weight: bold;">Aluno: {{ student.nome }}</h2>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h4>Pontuação Total</h4>
+            <p>{{ stats.total_score }}</p>
+        </div>
+        <div class="stat-card">
+            <h4>Quizzes Realizados</h4>
+            <p>{{ stats.total_quizzes }}</p>
+        </div>
+        <div class="stat-card">
+            <h4>Média Geral</h4>
+            <p>{{ stats.geral_avg }}%</p>
+        </div>
+        <div class="stat-card focus-area">
+            <h4>Área para Foco</h4>
+            <p>{{ stats.area_foco|capitalize }}</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h3>Desempenho por Matéria (%)</h3>
+        <canvas id="performanceChart" data-performance="{{ stats.category_performance | tojson | e }}"></canvas>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chartCanvas = document.getElementById('performanceChart');
+        if (chartCanvas) {
+            const performanceData = JSON.parse(chartCanvas.dataset.performance);
+            
+            new Chart(chartCanvas.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(performanceData).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
+                    datasets: [{
+                        label: 'Desempenho Médio (%)',
+                        data: Object.values(performanceData),
+                        backgroundColor: [
+                            'rgba(106, 90, 249, 0.6)', 'rgba(255, 127, 80, 0.6)',
+                            'rgba(32, 201, 151, 0.6)', 'rgba(255, 71, 87, 0.6)',
+                            'rgba(254, 207, 87, 0.6)', 'rgba(91, 192, 222, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(106, 90, 249, 1)', 'rgba(255, 127, 80, 1)',
+                            'rgba(32, 201, 151, 1)', 'rgba(255, 71, 87, 1)',
+                            'rgba(254, 207, 87, 1)', 'rgba(91, 192, 222, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, max: 100, ticks: { callback: function(value) { return value + "%" } } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Resultado do Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="result-container">
+        {% if score > total_score / 2 %}<div class="result-icon">🎉</div><h2 class="result-title" style="color: var(--accent);">Parabéns!</h2>
+        {% else %}<div class="result-icon">🤔</div><h2 class="result-title" style="color: var(--secondary);">Continue Tentando!</h2>{% endif %}
+        <p class="result-score">Sua pontuação foi: <strong>{{ score }} / {{ total_score }}</strong></p>
+        <div class="result-actions">
+            <a href="{{ url_for('portal_aluno') }}" class="btn btn-primary">Jogar Outro Quiz</a>
+            <a href="{{ url_for('ranking') }}" class="btn btn-secondary">Ver Ranking</a>
+        </div>
+    </div>
+
+    <div class="review-section">
+        <h2 class="portal-title">Revisão do Quiz</h2>
+        {% for item in review_data %}
+            <div class="review-item">
+                <p class="review-question">{{ loop.index }}. {{ item.texto }}</p>
+                <div class="review-options">
+                    {% for option in item.opcoes %}
+                        {% set is_correct = (option == item.resposta_correta) %}
+                        {% set is_user_choice = (option == item.sua_resposta) %}
+                        
+                        <div class="option-label 
+                            {% if is_correct %}correct-answer{% endif %} 
+                            {% if is_user_choice and not item.acertou %}wrong-answer{% endif %}">
+                            {{ option }}
+                            {% if is_user_choice and not item.acertou %} (Sua resposta ❌){% endif %}
+                            {% if is_correct %} (Resposta Certa ✅){% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

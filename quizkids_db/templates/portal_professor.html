@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block title %}Portal do Professor{% endblock %}
+{% block content %}
+<div class="container portal-container">
+    <h2 class="portal-title">Painel do Professor</h2>
+    <p class="subtitle">Bem-vindo(a), {{ session.user.nome }}! Aqui você pode gerenciar seus quizzes e acompanhar seus alunos.</p>
+    
+    <div class="teacher-dashboard">
+        <div class="dashboard-section-full">
+            <h3>Meus Quizzes Criados</h3>
+            <div class="dashboard-actions"><a href="{{ url_for('criar_quiz') }}" class="btn btn-primary">Criar Novo Quiz</a></div>
+            {% if quizzes %}
+                <ul class="item-list">
+                    {% for quiz in quizzes %}
+                        <li class="item-list-row">
+                            <span>{{ quiz.tema }} ({{ quiz.dificuldade }})</span>
+                            <form action="{{ url_for('delete_quiz', quiz_id=quiz.id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja remover este quiz? Esta ação não pode ser desfeita.');">
+                                <button type="submit" class="btn btn-danger btn-small">Remover</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Você ainda não criou nenhum quiz.</p>
+            {% endif %}
+        </div>
+        
+        <div class="dashboard-section-full">
+            <h3>Alunos na Plataforma</h3>
+            <p>Clique no nome de um aluno para ver seu desempenho detalhado.</p>
+            {% if students %}
+                <div class="student-grid">
+                {% for student in students %}
+                    <div class="student-card">
+                        <h4>{{ student.nome }}</h4>
+                        <p><strong>Pontuação:</strong> {{ student.pontuacao }}</p>
+                        <a href="{{ url_for('relatorio_aluno', aluno_cpf=student.cpf) }}" class="btn btn-secondary btn-small">Ver Relatório</a>
+                    </div>
+                {% endfor %}
+                </div>
+            {% else %}
+                <p>Ainda não há alunos cadastrados na plataforma.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

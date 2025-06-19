@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}Escolha a Matéria{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="portal-title">Escolha uma Matéria</h1>
+    <p class="subtitle">Ou clique em "Aleatório" para um desafio surpresa!</p>
+
+    <div class="category-grid">
+        <!-- Card para o modo Aleatório -->
+        <a href="{{ url_for('quiz_list', category='random') }}" class="category-card random-card">
+            <span class="category-icon">🎲</span>
+            <h3>Aleatório</h3>
+        </a>
+        
+        <!-- Cards para cada matéria -->
+        {% for cat in categories %}
+        <a href="{{ url_for('quiz_list', category=cat['categoria']) }}" class="category-card category-{{ cat['categoria']|default('geral') }}">
+            <span class="category-icon">
+                {% if cat['categoria'] == 'matematica' %}🧮
+                {% elif cat['categoria'] == 'ciencias' %}🔬
+                {% elif cat['categoria'] == 'historia' %}📜
+                {% elif cat['categoria'] == 'geografia' %}🗺️
+                {% elif cat['categoria'] == 'portugues' %}✍️
+                {% else %}⭐
+                {% endif %}
+            </span>
+            <h3>{{ cat['categoria']|capitalize }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="back-link-container">
+        <a href="{{ url_for('portal_aluno') }}" class="btn btn-secondary">&larr; Voltar ao Portal</a>
+    </div>
+</div>
+{% endblock %}

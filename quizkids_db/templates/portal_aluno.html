@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}Meu Portal{% endblock %}
+
+{% block content %}
+<div class="container portal-container">
+    <h1 class="portal-title">Olá, {{ session.user.nome }}!</h1>
+    <p class="subtitle">Pronto para a sua próxima aventura de conhecimento?</p>
+    
+    <div class="play-button-container">
+        <a href="{{ url_for('select_subject') }}" class="btn btn-primary btn-play">🚀 Jogar!</a>
+    </div>
+
+    <div class="progress-section">
+        <h2>Meu Progresso</h2>
+        <div class="progress-grid">
+            {% if progress %}
+                {% for category, percentage in progress.items() %}
+                <div class="progress-card">
+                    <div class="progress-card-header {{ category }}">
+                        <span class="category-icon">
+                            {% if category == 'matematica' %}🧮
+                            {% elif category == 'ciencias' %}🔬
+                            {% elif category == 'historia' %}📜
+                            {% elif category == 'geografia' %}🗺️
+                            {% elif category == 'portugues' %}✍️
+                            {% else %}⭐
+                            {% endif %}
+                        </span>
+                        <h4>{{ category|capitalize }}</h4>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="--progress-width: {{ percentage }}%;"></div>
+                    </div>
+                    <span class="progress-text">{{ percentage }}% completo</span>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>Você ainda não completou nenhum quiz. Clique em "Jogar" para começar!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

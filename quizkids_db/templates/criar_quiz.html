@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}Criar Novo Quiz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="main-title">Criador de Quiz</h1>
+    <div class="form-container">
+        <form action="{{ url_for('criar_quiz') }}" method="POST">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="tema">Tema do Quiz:</label>
+                    <input type="text" id="tema" name="tema" required placeholder="Ex: Capitais do Brasil">
+                </div>
+                <div class="form-group">
+                    <label for="dificuldade">Dificuldade:</label>
+                    <select id="dificuldade" name="dificuldade" required>
+                        <option value="Fácil">Fácil</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Difícil">Difícil</option>
+                    </select>
+                </div>
+            </div>
+            
+            <hr style="margin: 2rem 0;">
+            <h3>Perguntas do Quiz (até 5)</h3>
+
+            {% for i in range(1, 6) %}
+            <div class="question-creator-box">
+                <h4>Pergunta {{ i }}</h4>
+                <div class="form-group">
+                    <label for="pergunta{{i}}">Texto da Pergunta:</label>
+                    <input type="text" id="pergunta{{i}}" name="pergunta{{i}}" placeholder="Deixe em branco se não for usar">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group"><label>Alternativa A</label><input type="text" name="pergunta{{i}}_alt_a"></div>
+                    <div class="form-group"><label>Alternativa B</label><input type="text" name="pergunta{{i}}_alt_b"></div>
+                    <div class="form-group"><label>Alternativa C</label><input type="text" name="pergunta{{i}}_alt_c"></div>
+                    <div class="form-group"><label>Alternativa D</label><input type="text" name="pergunta{{i}}_alt_d"></div>
+                </div>
+                <div class="form-group">
+                    <label>Qual a alternativa CORRETA?</label>
+                    <select name="pergunta{{i}}_correta">
+                        <option value="A">Alternativa A</option>
+                        <option value="B">Alternativa B</option>
+                        <option value="C">Alternativa C</option>
+                        <option value="D">Alternativa D</option>
+                    </select>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary">Salvar Quiz</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

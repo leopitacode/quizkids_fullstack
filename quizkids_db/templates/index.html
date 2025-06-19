@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Bem-vindo!{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-section">
+        <h1 class="main-title">
+            QuizKids 🧩
+        </h1>
+        <p class="subtitle">A plataforma onde o conhecimento se transforma em aventura!</p>
+    
+    <div class="main-actions-container">
+        <a href="{{ url_for('login') }}" class="action-card login-card">
+            <span class="action-icon">🔑</span>
+            <h3>Fazer Login</h3>
+            <p>Entre na sua conta para continuar a jornada.</p>
+        </a>
+        <a href="{{ url_for('register') }}" class="action-card register-card">
+            <span class="action-icon">📝</span>
+            <h3>Criar uma Conta</h3>
+            <p>Registe-se como aluno ou professor.</p>
+        </a>
+        <a href="{{ url_for('ranking') }}" class="action-card ranking-card">
+            <span class="action-icon">🏆</span>
+            <h3>Ver Ranking</h3>
+            <p>Veja quem são os maiores pontuadores!</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

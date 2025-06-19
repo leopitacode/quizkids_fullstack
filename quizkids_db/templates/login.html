@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container" style="display:flex;justify-content:center;align-items:center;min-height:80vh;">
+    <div style="display:flex;flex-direction:row;box-shadow:0 6px 32px rgba(106,90,249,0.10);border-radius:18px;overflow:hidden;max-width:800px;width:100%;background:#fff;">
+        <!-- Bloco visual à esquerda -->
+        <div style="background:linear-gradient(135deg,#6a5af9 60%,#d55ffd 100%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 2rem;min-width:260px;max-width:340px;width:40%;">
+            <div style="font-size:3.5rem;margin-bottom:1rem;">
+                <span style="display:inline-block;background:rgba(255,255,255,0.12);border-radius:50%;padding:0.7rem;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#fff" opacity="0.9"/><ellipse cx="12" cy="17" rx="7" ry="4" fill="#d6d0fa"/></svg>
+                </span>
+            </div>
+            <h2 style="font-family:var(--font-display);font-size:1.7rem;margin-bottom:0.5rem;">Bem-vindo de volta!</h2>
+            <div style="font-size:1.08rem;opacity:0.93;text-align:center;">Acesse sua conta para continuar aprendendo.<br>Se ainda não tem, <a href="{{ url_for('register') }}" style="color:#fff;text-decoration:underline;font-weight:bold;">cadastre-se</a>!</div>
+        </div>
+        <!-- Formulário à direita -->
+        <div class="form-container login-card" style="flex:1;min-width:260px;max-width:400px;padding:2.5rem 2rem;background:#fff;display:flex;flex-direction:column;justify-content:center;">
+            <form action="{{ url_for('login') }}" method="POST" autocomplete="off" id="loginForm">
+                <div class="form-group" style="margin-bottom:1.2rem;">
+                    <label style="font-weight:700;margin-bottom:0.4rem;display:block;">Eu sou:</label>
+                    <div style="display:flex;gap:1.5rem;align-items:center;">
+                        <label style="display:flex;align-items:center;gap:0.4rem;font-weight:500;cursor:pointer;">
+                            <input type="radio" name="login_type" value="aluno" checked style="accent-color:#6a5af9;"> Aluno
+                        </label>
+                        <label style="display:flex;align-items:center;gap:0.4rem;font-weight:500;cursor:pointer;">
+                            <input type="radio" name="login_type" value="professor" style="accent-color:#6a5af9;"> Professor
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="identifier">CPF</label>
+                    <input type="text" name="identifier" id="identifier" class="input-field cpf-mask" maxlength="14" placeholder="000.000.000-00" required autocomplete="username">
+                </div>
+                <div class="form-group" style="position:relative;">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" class="input-field" placeholder="Digite sua senha" required autocomplete="current-password" style="padding-right:40px;">
+                    <span class="toggle-password" onclick="togglePassword('password')" style="position:absolute;top:0;bottom:-30px;right:10px;display:flex;align-items:center;cursor:pointer; color:#aaa; font-size:1.2rem;">👁️</span>
+                </div>
+                <div id="login-erro" style="color:#ff4757; font-weight:bold; margin-bottom:0.7rem; display:none;"></div>
+                <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.1rem; margin-top:0.5rem;">Entrar</button>
+                <div style="text-align:center; margin-top:1.2rem;">
+                    <a href="#" style="color:#6a5af9; text-decoration:underline; font-size:0.98rem;">Esqueceu a senha?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function togglePassword(id) {
+    const input = document.getElementById(id);
+    if (input.type === 'password') {
+        input.type = 'text';
+    } else {
+        input.type = 'password';
+    }
+}
+// Validação simples para feedback visual
+const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+        const cpf = document.getElementById('identifier').value;
+        const senha = document.getElementById('password').value;
+        let erro = '';
+        if (!cpf.match(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)) erro = 'Digite um CPF válido.';
+        else if (senha.length < 4) erro = 'Senha muito curta.';
+        if (erro) {
+            document.getElementById('login-erro').innerText = erro;
+            document.getElementById('login-erro').style.display = 'block';
+            e.preventDefault();
+        } else {
+            document.getElementById('login-erro').style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

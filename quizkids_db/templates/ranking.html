@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Ranking dos Campeões{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="main-title">🏆 Ranking dos Campeões 🏆</h1>
+    <div class="ranking-container">
+        {% if ranking %}
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Aluno</th>
+                    <th>Pontuação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aluno in ranking %}
+                <tr>
+                    <td class="pos-{{ loop.index }}">
+                        {% if loop.index == 1 %}🥇
+                        {% elif loop.index == 2 %}🥈
+                        {% elif loop.index == 3 %}🥉
+                        {% else %}{{ loop.index }}º
+                        {% endif %}
+                    </td>
+                    <td>{{ aluno.nome }}</td>
+                    <td>{{ aluno.pontuacao }} pontos</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="subtitle">O ranking ainda está vazio. Jogue um quiz para ser o primeiro!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+{% block title %}Painel do Administrador{% endblock %}
+
+{% block content %}
+<div class="admin-dashboard-wrapper" style="display:flex;min-height:calc(100vh - 80px);height:calc(100vh - 80px);width:100vw;">
+    <!-- Sidebar -->
+    <nav class="admin-sidebar" style="width:260px;min-width:200px;background:#232946;padding:3.5rem 1.5rem 2rem 1.5rem;display:flex;flex-direction:column;gap:2rem;box-shadow:2px 0 16px rgba(60,60,60,0.07);border-radius:18px 0 0 18px;height:100%;">
+        <div style="font-family:var(--font-display);font-size:1.5rem;color:#fff;font-weight:900;margin-bottom:3rem;letter-spacing:-1px;">Admin</div>
+        <button class="sidebar-link active" data-section="aprovacoes" type="button"><span style="margin-right:0.7rem;">📝</span>Aprovações</button>
+        <button class="sidebar-link" data-section="professores" type="button"><span style="margin-right:0.7rem;">👨‍🏫</span>Professores</button>
+        <button class="sidebar-link" data-section="alunos" type="button"><span style="margin-right:0.7rem;">🎓</span>Alunos</button>
+    </nav>
+    <!-- Conteúdo -->
+    <div class="admin-dashboard-content" style="flex:1;padding:3.5rem 3vw 3.5rem 3vw;max-width:100vw;overflow-x:auto;height:100%;">
+        <h1 class="portal-title" style="font-size:2.3rem; color:#232946; letter-spacing:-1px; margin-bottom:2.5rem; text-align:left;">Dashboard Administrativo</h1>
+        <!-- Aprovações -->
+        <section id="section-aprovacoes" class="admin-section-content">
+            <div class="dashboard-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(60,60,60,0.07);padding:2.5rem 2rem;">
+                <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1.2rem;">
+                    <span style="font-size:1.7rem;color:#6a5af9;">📝</span>
+                    <h2 style="font-size:1.2rem;color:#222;margin:0;font-weight:900;">Aprovações Pendentes</h2>
+                </div>
+                {% if pending_professors %}
+                    <table class="ranking-table" style="font-size:1.05rem;">
+                        <thead><tr><th>Nome</th><th>Email</th><th>Escola</th><th>Ação</th></tr></thead>
+                        <tbody>
+                            {% for prof in pending_professors %}
+                            <tr>
+                                <td>{{ prof.nome }}</td><td>{{ prof.email }}</td><td>{{ prof.escola }}</td>
+                                <td><form action="{{ url_for('approve_professor', cpf=prof.cpf) }}" method="POST"><button type="submit" class="btn btn-accent btn-small">Aprovar</button></form></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p style="color:#888;">Nenhum professor pendente de aprovação.</p>
+                {% endif %}
+            </div>
+        </section>
+        <!-- Professores -->
+        <section id="section-professores" class="admin-section-content" style="display:none;">
+            <div class="dashboard-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(60,60,60,0.07);padding:2.5rem 2rem;">
+                <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1.2rem;">
+                    <span style="font-size:1.7rem;color:#20c997;">👨‍🏫</span>
+                    <h2 style="font-size:1.2rem;color:#222;margin:0;font-weight:900;">Professores</h2>
+                </div>
+                <table class="ranking-table" style="font-size:1.05rem;">
+                    <thead><tr><th>Nome</th><th>CPF</th><th>Email</th><th>Status</th><th>Ação</th></tr></thead>
+                    <tbody>
+                        {% for prof in all_professors %}
+                        <tr>
+                            <td>{{ prof.nome }} {% if prof.is_admin %}<span style="color:#6a5af9;font-weight:bold;">(Admin)</span>{% endif %}</td><td>{{ prof.cpf }}</td><td>{{ prof.email }}</td>
+                            <td><span class="status-{{ prof.status }}">{{ prof.status }}</span></td>
+                            <td>
+                                {% if not prof.is_admin %}
+                                <form action="{{ url_for('delete_professor', cpf=prof.cpf) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja remover este professor?');">
+                                    <button type="submit" class="btn btn-danger btn-small">Remover</button>
+                                </form>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Alunos -->
+        <section id="section-alunos" class="admin-section-content" style="display:none;">
+            <div class="dashboard-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 16px rgba(60,60,60,0.07);padding:2.5rem 2rem;">
+                <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1.2rem;">
+                    <span style="font-size:1.7rem;color:#ff4757;">🎓</span>
+                    <h2 style="font-size:1.2rem;color:#222;margin:0;font-weight:900;">Alunos</h2>
+                </div>
+                <table class="ranking-table" style="font-size:1.05rem;">
+                    <thead><tr><th>Nome</th><th>CPF</th><th>Email</th><th>Ação</th></tr></thead>
+                    <tbody>
+                        {% for s in all_students %}
+                        <tr>
+                            <td>{{ s.nome }}</td><td>{{ s.cpf }}</td><td>{{ s.email }}</td>
+                            <td>
+                                <form action="{{ url_for('delete_student', cpf=s.cpf) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja remover este aluno?');">
+                                    <button type="submit" class="btn btn-danger btn-small">Remover</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+.admin-dashboard-wrapper {
+    background: #f7f7fb;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(60,60,60,0.04);
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 100vw;
+    min-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
+}
+.admin-sidebar {
+    min-height: 100%;
+    border-right: 1px solid #ececf6;
+    height: 100%;
+}
+.sidebar-link {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.15rem;
+    font-family: var(--font-text, 'Nunito', Arial, sans-serif);
+    font-weight: 700;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 0.2rem;
+}
+.sidebar-link.active, .sidebar-link:hover {
+    background: #6a5af9;
+    color: #fff;
+}
+.admin-dashboard-content {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    overflow-x: auto;
+}
+.dashboard-card {
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.2s;
+}
+.dashboard-card:hover {
+    box-shadow: 0 6px 32px rgba(60,60,60,0.13);
+}
+.ranking-table th, .ranking-table td {
+    padding: 0.9rem 0.7rem;
+    font-size: 1.08rem;
+}
+.ranking-table th {
+    color: #6a5af9;
+    font-weight: 900;
+    background: #f7f7fb;
+    border-bottom: 2px solid #ececf6;
+}
+.ranking-table tr:nth-child(even) {
+    background: #fafbfc;
+}
+.ranking-table tr:hover {
+    background: #f0f4ff;
+}
+.status-aprovado { color: #20c997; font-weight: bold; }
+.status-pendente { color: #ffbe76; font-weight: bold; }
+@media (max-width: 1100px) {
+    .admin-dashboard-wrapper { flex-direction: column; height: auto; min-height: 0; }
+    .admin-sidebar { flex-direction: row; width: 100%; min-width: 0; border-radius: 18px 18px 0 0; border-right: none; border-bottom: 1px solid #ececf6; justify-content: center; align-items: center; gap: 0.5rem; padding: 1.2rem 0.5rem; height: auto; }
+    .sidebar-link { font-size: 1rem; padding: 0.5rem 0.7rem; }
+    .admin-dashboard-content { padding: 1.2rem 0.5rem; }
+}
+</style>
+<script>
+// Sidebar navigation
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
+const sections = document.querySelectorAll('.admin-section-content');
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const section = this.getAttribute('data-section');
+        sections.forEach(sec => {
+            sec.style.display = (sec.id === 'section-' + section) ? 'block' : 'none';
+        });
+    });
+});
+</script>
+{% endblock %}

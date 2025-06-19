@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="main-title">Crie sua Conta</h1>
+    <div class="form-container">
+        <!-- Abas para selecionar tipo de cadastro -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showForm('aluno')">Sou Aluno / Responsável</button>
+            <button class="tab-button" onclick="showForm('professor')">Sou Professor</button>
+        </div>
+
+        <!-- Formulário de Aluno -->
+        <form id="aluno-form" class="form-content active" action="{{ url_for('register') }}" method="POST" autocomplete="off" onsubmit="return validateAlunoForm()">
+            <input type="hidden" name="reg_type" value="aluno">
+            <h3>Dados do Responsável</h3>
+            <div class="form-grid">
+                <div class="form-group"><label>Nome do Responsável</label><input type="text" name="resp_nome" required></div>
+                <div class="form-group"><label>CPF do Responsável</label><input type="text" name="resp_cpf" class="cpf-mask" maxlength="14" placeholder="000.000.000-00" required></div>
+                <div class="form-group"><label>E-mail</label><input type="email" name="resp_email" required></div>
+                <div class="form-group"><label>Telefone</label><input type="tel" name="resp_telefone" class="phone-mask" maxlength="15" placeholder="(00) 00000-0000" required></div>
+            </div>
+            <h3>Dados do Aluno</h3>
+            <div class="form-grid">
+                <div class="form-group"><label>Nome do Aluno</label><input type="text" name="aluno_nome" required></div>
+                <div class="form-group"><label>CPF do Aluno</label><input type="text" name="aluno_cpf" class="cpf-mask" maxlength="14" placeholder="000.000.000-00" required></div>
+                <div class="form-group"><label>Data de Nascimento</label><input type="date" name="aluno_nascimento" required></div>
+                <div class="form-group"><label>Escola</label><input type="text" name="aluno_escola" required></div>
+                <div class="form-group"><label>Matrícula Escolar</label><input type="text" name="aluno_matricula" required></div>
+                <div class="form-group">
+                    <label>Senha de Acesso</label>
+                    <div style="position:relative;">
+                        <input type="password" name="aluno_senha" id="aluno_senha" minlength="6" required style="padding-right:40px;">
+                        <span class="toggle-password" onclick="togglePassword('aluno_senha')" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);cursor:pointer;">👁️</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirme a Senha</label>
+                    <div style="position:relative;">
+                        <input type="password" name="aluno_senha2" id="aluno_senha2" minlength="6" required style="padding-right:40px;">
+                        <span class="toggle-password" onclick="togglePassword('aluno_senha2')" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);cursor:pointer;">👁️</span>
+                    </div>
+                </div>
+            </div>
+            <div id="aluno-erro" style="color:#ff4757; font-weight:bold; margin-bottom:1rem;"></div>
+            <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+        </form>
+
+        <!-- Formulário de Professor -->
+        <form id="professor-form" class="form-content" action="{{ url_for('register') }}" method="POST" autocomplete="off" onsubmit="return validateProfessorForm()">
+            <input type="hidden" name="reg_type" value="professor">
+             <h3>Dados do Professor</h3>
+            <div class="form-grid">
+                <div class="form-group"><label>Nome Completo</label><input type="text" name="prof_nome" required></div>
+                <div class="form-group"><label>CPF</label><input type="text" name="prof_cpf" class="cpf-mask" maxlength="14" placeholder="000.000.000-00" required></div>
+                <div class="form-group"><label>E-mail Institucional</label><input type="email" name="prof_email" required></div>
+                <div class="form-group"><label>Escola onde trabalha</label><input type="text" name="prof_escola" required></div>
+                <div class="form-group">
+                    <label>Crie uma Senha</label>
+                    <div style="position:relative;">
+                        <input type="password" name="prof_senha" id="prof_senha" minlength="6" required style="padding-right:40px;">
+                        <span class="toggle-password" onclick="togglePassword('prof_senha')" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);cursor:pointer;">👁️</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirme a Senha</label>
+                    <div style="position:relative;">
+                        <input type="password" name="prof_senha2" id="prof_senha2" minlength="6" required style="padding-right:40px;">
+                        <span class="toggle-password" onclick="togglePassword('prof_senha2')" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);cursor:pointer;">👁️</span>
+                    </div>
+                </div>
+            </div>
+            <div id="prof-erro" style="color:#ff4757; font-weight:bold; margin-bottom:1rem;"></div>
+            <button type="submit" class="btn btn-secondary">Cadastrar Professor</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function showForm(formName) {
+        document.getElementById('aluno-form').classList.toggle('active', formName === 'aluno');
+        document.getElementById('professor-form').classList.toggle('active', formName === 'professor');
+        document.querySelector('.tab-button[onclick="showForm(\'aluno\')"]').classList.toggle('active', formName === 'aluno');
+        document.querySelector('.tab-button[onclick="showForm(\'professor\')"]').classList.toggle('active', formName === 'professor');
+    }
+
+    function togglePassword(id) {
+        const input = document.getElementById(id);
+        if (input.type === 'password') {
+            input.type = 'text';
+        } else {
+            input.type = 'password';
+        }
+    }
+
+    // Máscara de CPF
+    document.querySelectorAll('.cpf-mask').forEach(function(input) {
+        input.addEventListener('input', function(e) {
+            let v = e.target.value.replace(/\D/g, '');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            e.target.value = v;
+        });
+    });
+    // Máscara de telefone
+    document.querySelectorAll('.phone-mask').forEach(function(input) {
+        input.addEventListener('input', function(e) {
+            let v = e.target.value.replace(/\D/g, '');
+            v = v.replace(/(\d{2})(\d)/, '($1) $2');
+            v = v.replace(/(\d{5})(\d{1,4})$/, '$1-$2');
+            e.target.value = v;
+        });
+    });
+
+    // Validação de CPF (básica)
+    function isValidCPF(cpf) {
+        cpf = cpf.replace(/\D/g, '');
+        if (cpf.length !== 11 || /^([0-9])\1+$/.test(cpf)) return false;
+        let sum = 0, rest;
+        for (let i = 1; i <= 9; i++) sum += parseInt(cpf.substring(i-1, i)) * (11 - i);
+        rest = (sum * 10) % 11;
+        if ((rest === 10) || (rest === 11)) rest = 0;
+        if (rest !== parseInt(cpf.substring(9, 10))) return false;
+        sum = 0;
+        for (let i = 1; i <= 10; i++) sum += parseInt(cpf.substring(i-1, i)) * (12 - i);
+        rest = (sum * 10) % 11;
+        if ((rest === 10) || (rest === 11)) rest = 0;
+        if (rest !== parseInt(cpf.substring(10, 11))) return false;
+        return true;
+    }
+
+    function validateAlunoForm() {
+        const cpfAluno = document.querySelector('input[name="aluno_cpf"]').value;
+        const cpfResp = document.querySelector('input[name="resp_cpf"]').value;
+        const email = document.querySelector('input[name="resp_email"]').value;
+        const senha = document.getElementById('aluno_senha').value;
+        const senha2 = document.getElementById('aluno_senha2').value;
+        const matricula = document.querySelector('input[name="aluno_matricula"]').value;
+        const nascimento = document.querySelector('input[name="aluno_nascimento"]').value;
+        let erro = '';
+        if (!isValidCPF(cpfAluno)) erro = 'CPF do aluno inválido.';
+        else if (!isValidCPF(cpfResp)) erro = 'CPF do responsável inválido.';
+        else if (!email.match(/^\S+@\S+\.\S+$/)) erro = 'E-mail do responsável inválido.';
+        else if (senha.length < 6) erro = 'A senha deve ter pelo menos 6 caracteres.';
+        else if (senha !== senha2) erro = 'As senhas não coincidem.';
+        else if (!matricula) erro = 'Matrícula escolar obrigatória.';
+        else if (nascimento && new Date(nascimento) > new Date()) erro = 'Data de nascimento não pode ser futura.';
+        document.getElementById('aluno-erro').innerText = erro;
+        return erro === '';
+    }
+
+    function validateProfessorForm() {
+        const cpf = document.querySelector('input[name="prof_cpf"]').value;
+        const email = document.querySelector('input[name="prof_email"]').value;
+        const senha = document.getElementById('prof_senha').value;
+        const senha2 = document.getElementById('prof_senha2').value;
+        let erro = '';
+        if (!isValidCPF(cpf)) erro = 'CPF inválido.';
+        else if (!email.match(/^\S+@\S+\.\S+$/)) erro = 'E-mail inválido.';
+        else if (senha.length < 6) erro = 'A senha deve ter pelo menos 6 caracteres.';
+        else if (senha !== senha2) erro = 'As senhas não coincidem.';
+        document.getElementById('prof-erro').innerText = erro;
+        return erro === '';
+    }
+</script>
+{% endblock %}

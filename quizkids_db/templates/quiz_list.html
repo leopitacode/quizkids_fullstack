@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Quizzes de {{ category|capitalize }}{% endblock %}
+
+{% block content %}
+<div class="container portal-container">
+    <a href="{{ url_for('select_subject') }}" class="btn btn-secondary" style="margin-bottom: 2rem;">&larr; Escolher outra matéria</a>
+    <h2 class="portal-title">Quizzes de {{ category|capitalize }}</h2>
+
+    <div class="quiz-list">
+        {% if quizzes %}
+            {% for quiz in quizzes %}
+            <div class="quiz-card-wrapper">
+                 <a href="{{ url_for('quiz', quiz_id=quiz.id) }}" class="quiz-card">
+                    {% if quiz.id in completed_quizzes %}
+                        <span class="status-badge">✅</span>
+                    {% endif %}
+                    <div class="quiz-card-header {{ quiz.categoria|default('geral') }}"></div>
+                    <div class="quiz-card-body">
+                        <h3>{{ quiz.tema }}</h3>
+                        <span class="quiz-difficulty dificuldade-{{ quiz.dificuldade }}">{{ quiz.dificuldade }}</span>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="subtitle">Nenhum quiz encontrado para esta categoria.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

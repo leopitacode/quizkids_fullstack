@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizKids – {% block title %}Aprendizado Divertido{% endblock %}</title>
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap](https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="[https://cdn.jsdelivr.net/npm/chart.js](https://cdn.jsdelivr.net/npm/chart.js)"></script>
+</head>
+<body>
+    <header class="app-header">
+        {# Define a URL de "casa" baseada no tipo de usuário logado #}
+        {% set home_url = url_for('index') %}
+        {% if session.user %}
+            {% if session.user.type == 'aluno' %}
+                {% set home_url = url_for('portal_aluno') %}
+            {% elif session.user.is_admin %}
+                {% set home_url = url_for('painel_admin') %}
+            {% else %}
+                {% set home_url = url_for('portal_professor') %}
+            {% endif %}
+        {% endif %}
+        <a href="{{ home_url }}" class="header-logo">QuizKids 🧩</a>
+
+        <nav class="user-info">
+            {% if session.user %}
+                <span>Olá, {{ session.user.nome }}!</span>
+                <a href="{{ home_url }}" class="btn btn-primary btn-small">Portal</a>
+                <a href="{{ url_for('ranking') }}" class="btn btn-accent btn-small">Ranking</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-danger btn-small">Sair</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-small">Login</a>
+                <a href="{{ url_for('register') }}" class="btn btn-secondary btn-small">Cadastre-se</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="page active">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-container flash-topright">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <style>
+    .flash-container.flash-topright {
+        position: fixed;
+        top: auto;
+        bottom: 40px;
+        right: 40px;
+        left: auto;
+        max-width: 320px;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        pointer-events: none;
+    }
+    .flash {
+        opacity: 0.92;
+        margin-bottom: 0.7rem;
+        border-radius: 8px;
+        padding: 0.7rem 1.2rem;
+        min-width: 180px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        font-size: 0.98rem;
+        font-family: var(--font-text, 'Nunito', Arial, sans-serif);
+        pointer-events: auto;
+        transition: opacity 0.5s;
+    }
+    .flash-success { background: #20c997; color: #fff; }
+    .flash-danger { background: #ff4757; color: #fff; }
+    .flash-info { background: #6a5af9; color: #fff; }
+    .flash-warning { background: #ffbe76; color: #333; }
+    </style>
+    <script>
+    // Timeout para esconder as mensagens flash
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.flash').forEach(function(flash) {
+            setTimeout(function() {
+                flash.style.opacity = '0';
+                setTimeout(function() {
+                    if(flash.parentNode) flash.parentNode.removeChild(flash);
+                }, 600);
+            }, 3500);
+        });
+    });
+    </script>
+
+    <script>
+        function applyCpfMask(event) {
+            const input = event.target;
+            let value = input.value.replace(/\D/g, '').substring(0, 11);
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})\.(\d{3})(\d)/, '$1.$2.$3');
+            value = value.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            input.value = value;
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.cpf-mask').forEach(input => {
+                input.addEventListener('input', applyCpfMask);
+            });
+        });
+    </script>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascote Interativo</title>
+    <style>
+        /* ========================================
+        ESTILOS DO MASCOTE
+        ========================================
+        Estes estilos garantem que o mascote e o balão de fala funcionem corretamente.
+        */
+
+        :root {
+            --mascot-primary-color: #6a5af9;
+            --mascot-accent-color: #ff7f50;
+            --mascot-speech-bg: #ffffff;
+            --mascot-text-color: #333;
+        }
+
+        .interactive-mascot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        .mascot-character {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: float-animation 3s ease-in-out infinite;
+        }
+
+        .mascot-character:hover {
+            transform: scale(1.1);
+            animation-play-state: paused;
+        }
+
+        @keyframes float-animation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .mascot-speech-bubble {
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            background-color: var(--mascot-speech-bg);
+            color: var(--mascot-text-color);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            width: 220px;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        /* Cauda do balão de fala */
+        .mascot-speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 30px;
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--mascot-speech-bg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ======================================== -->
+    <!-- CÓDIGO DO MASCOTE - Cole isto no seu HTML -->
+    <!-- ======================================== -->
+    <div class="interactive-mascot-container">
+        
+        <!-- O Balão de Fala -->
+        <div class="mascot-speech-bubble" id="mascot-speech-bubble">
+            <p id="mascot-message">Olá! Precisa de ajuda? Clique em mim para uma dica!</p>
+        </div>
+
+        <!-- A Mascote (SVG) -->
+        <div class="mascot-character" id="mascot-character">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <!-- Corpo -->
+                    <path d="M25,90 C10,80 10,60 20,40 C30,20 70,20 80,40 C90,60 90,80 75,90 Z" fill="#6a5af9"/>
+                    <!-- Olho -->
+                    <circle cx="50" cy="55" r="15" fill="white"/>
+                    <circle cx="50" cy="55" r="8" fill="#333"/>
+                    <circle cx="53" cy="52" r="3" fill="white" opacity="0.8"/>
+                    <!-- Antena -->
+                    <line x1="50" y1="25" x2="50" y2="15" stroke="#4a4e69" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="50" cy="12" r="4" fill="#ff7f50"/>
+                    <!-- Pés -->
+                    <ellipse cx="35" cy="90" rx="15" ry="5" fill="#4a4e69"/>
+                    <ellipse cx="65" cy="90" rx="15" ry="5" fill="#4a4e69"/>
+                </g>
+            </svg>
+        </div>
+
+    </div>
+    
+    <script>
+        /* ========================================
+        JAVASCRIPT DO MASCOTE
+        ========================================
+        */
+        document.addEventListener('DOMContentLoaded', function() {
+            const mascotContainer = document.querySelector('.interactive-mascot-container');
+            const mascotCharacter = document.getElementById('mascot-character');
+            const speechBubble = document.getElementById('mascot-speech-bubble');
+            const mascotMessage = document.getElementById('mascot-message');
+
+            if (!mascotContainer) return;
+
+            // --- Mensagens e Curiosidades ---
+            const clickMessages = [
+                "Você consegue! Continue a aprender!",
+                "Cada quiz é um novo desafio!",
+                "Não desista, a prática leva à perfeição!",
+                "Aprender é uma aventura!"
+            ];
+            
+            const didYouKnowFacts = [
+                "Você sabia? O cérebro humano tem cerca de 86 mil milhões de neurónios.",
+                "Você sabia? A água cobre aproximadamente 71% da superfície da Terra.",
+                "Você sabia? O Sol é uma estrela de tamanho médio.",
+                "Você sabia? O chocolate já foi usado como moeda pelos Maias.",
+                "Você sabia? A luz do sol demora cerca de 8 minutos a chegar à Terra."
+            ];
+
+            let currentFactIndex = 0;
+            let factInterval;
+            let clickMessageTimeout;
+
+            // Função para atualizar a curiosidade
+            function updateFact() {
+                mascotMessage.textContent = didYouKnowFacts[currentFactIndex];
+                currentFactIndex = (currentFactIndex + 1) % didYouKnowFacts.length; // Loop
+            }
+
+            // Função para iniciar o ciclo de curiosidades
+            function startFactCycling() {
+                clearInterval(factInterval); // Garante que não haja ciclos duplicados
+                updateFact(); // Mostra a primeira curiosidade imediatamente
+                factInterval = setInterval(updateFact, 10000); // Muda a cada 10 segundos
+            }
+
+            // --- Event Listeners ---
+
+            // Interação ao clicar
+            mascotCharacter.addEventListener('click', () => {
+                // Interrompe o ciclo de curiosidades e qualquer timeout pendente
+                clearInterval(factInterval);
+                clearTimeout(clickMessageTimeout);
+
+                // Mostra uma mensagem de incentivo aleatória
+                const randomMessage = clickMessages[Math.floor(Math.random() * clickMessages.length)];
+                mascotMessage.textContent = randomMessage;
+                
+                // Após 3 segundos, reinicia o ciclo de curiosidades
+                clickMessageTimeout = setTimeout(() => {
+                    startFactCycling();
+                }, 3000);
+            });
+
+            // --- Inicialização ---
+            startFactCycling();
+        });
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

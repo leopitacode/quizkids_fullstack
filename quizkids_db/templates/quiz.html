@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Quiz em Andamento{% endblock %}
+
+{% block content %}
+<div class="quiz-page-container">
+    <h1 class="portal-title">{{ quiz.tema }}</h1>
+    <form action="{{ url_for('submit_quiz', quiz_id=quiz.id) }}" method="POST">
+        {% if perguntas and perguntas|length > 0 %}
+            {% for pergunta in perguntas %}
+                <div class="question-container">
+                    <h2 class="question-text">{{ loop.index }}. {{ pergunta.texto }}</h2>
+                    <div class="options-container">
+                        {% for opcao in pergunta.opcoes %}
+                        <label class="option-btn">
+                            <input type="radio" name="pergunta_{{ pergunta.id }}" value="{{ opcao }}" required>
+                            {{ opcao }}
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary">Finalizar e Ver Pontuação</button>
+            </div>
+        {% else %}
+            <div class="question-container">
+                <h2 class="question-text">Este quiz ainda não possui perguntas disponíveis.</h2>
+            </div>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

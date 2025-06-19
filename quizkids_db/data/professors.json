@@ -1,0 +1,11 @@
+[
+    {
+        "nome": "Admin",
+        "cpf": "00000000000",
+        "email": "admin@quizkids.com",
+        "escola": "Escola Administradora",
+        "senha": "admin",
+        "status": "aprovado",
+        "is_admin": true
+    }
+]
