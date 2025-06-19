@@ -1,5 +1,7 @@
 import json
 import os
+import psycopg2
+import psycopg2.extras
 import sqlite3
 import time
 from collections import defaultdict
@@ -15,15 +17,22 @@ app = Flask(__name__,
             template_folder='templates')
 
 app.secret_key = 'sua-chave-secreta-super-segura'
-DATABASE = 'quizkids.db'
+DATABASE_FILE = 'quizkids.db'
 
 # --- FUNÇÕES DE CONEXÃO COM O BANCO DE DADOS ---
 
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-        db.row_factory = sqlite3.Row
+        # Verifica se estamos no ambiente de produção da Render
+        if 'DATABASE_URL' in os.environ:
+            # Conecta ao PostgreSQL na Render
+            db = g._database = psycopg2.connect(os.environ['DATABASE_URL'])
+        else:
+            # Conecta ao SQLite localmente (no seu PC)
+            db = g._database = sqlite3.connect(DATABASE_FILE)
+            # Não podemos esquecer o row_factory para o sqlite
+            db.row_factory = sqlite3.Row
     return db
 
 @app.teardown_appcontext
